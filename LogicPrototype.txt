@@ -13,3 +13,6 @@ yI = xI * 1R1 + xI * 2R2 + ... + xI * nRn + eI = xIr + eI
 r = rating vector
 
 error term eI for a particular game i: eI = yI - (rA - rB)
+
+The complete set of m game observations forms a (m x n) system of equations which can be expressed in matrix form as: y = Xr + e
+we know that the vector of ratings will be a solution to the normal equations: XTXr = XTy
