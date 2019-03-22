@@ -10,5 +10,6 @@ xJ = independent predictor variable for team j (1 <= j <= n). xJ can be -1, 0, o
 Y = margin of victory
 yI = margin of victory for game i
 yI = xI * 1R1 + xI * 2R2 + ... + xI * nRn + eI = xIr + eI
+r = rating vector
 
 error term eI for a particular game i: eI = yI - (rA - rB)
