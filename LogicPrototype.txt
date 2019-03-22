@@ -1,0 +1,14 @@
+rA = rating for team A
+rB = rating for team B
+Y = random variable representing the margin of victory for a particular game between teams A and B
+E[Y] = rA - rB. E[Y] should be the expected value for Y
+y = the observed margin of victory between teams A and B
+
+===========
+n = number of teams
+xJ = independent predictor variable for team j (1 <= j <= n). xJ can be -1, 0, or 1.
+Y = margin of victory
+yI = margin of victory for game i
+yI = xI * 1R1 + xI * 2R2 + ... + xI * nRn + eI = xIr + eI
+
+error term eI for a particular game i: eI = yI - (rA - rB)
