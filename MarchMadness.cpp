@@ -10,18 +10,14 @@ class MarchMadness{
 ofstream myfile;
 string line;
 string date;
-int team1, team1Score, team2, team2Score;
+string team1, team1Score, team2, team2Score;
 
 MarchMadness(){
     //myfile.open("ncaaD1.txt", ios::in);
     ifstream inputFile("ncaaD1.txt");
     cout << "test" << endl;
-    inputFile >> date;
-    inputFile >> line;
-    cout << date << ", " << team1 << endl;
     while(inputFile >> date >> team1 >> team1Score >> team2 >> team2Score){
-        cout << "test2" << endl;
-        cout << date << team1 << team1Score << team2 << team2Score << endl;
+        cout << date << ", " << team1 << ", " << team1Score << ", " << team2 << ", " << team2Score << ", " << endl;
     }
 
     myfile.close();
