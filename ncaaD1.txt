@@ -1,0 +1,639 @@
+2019-03-19 @Nebraska                  7  Air Force                 6           
+2019-03-19 @Alabama                  16  Maine                     0           
+2019-03-19 @Morehead St               9  Alabama St                2           
+2019-03-19  Albany NY                 9 @St Peter's                7           
+2019-03-19  Arkansas                 11 @Texas                     4           
+2019-03-19 @Mississippi              12  Ark Pine Bluff            2           
+2019-03-19 @Ball St                   6  Purdue                    0           
+2019-03-19 @St Bonaventure           11  Bucknell                  5           
+2019-03-19 @E Illinois                2  Butler                    0           
+2019-03-19 @Cent Arkansas             9  Oral Roberts              3           
+2019-03-19 @Wake Forest              14  Charlotte                 6           
+2019-03-19 @Wright St                10  Cincinnati                4           
+2019-03-19  Ga Southern               6 @Citadel                   2           
+2019-03-19 @UNLV                      6  CS Northridge             5           
+2019-03-19 @CS Sacramento             7  San Jose St               2           
+2019-03-19 @Dallas Bap                7  Oklahoma St               5           
+2019-03-19 @James Madison             4  Fairfield                 2           
+2019-03-19 @Florida                  13  Jacksonville              8           
+2019-03-19  South Carolina           12 @Furman                    7           
+2019-03-19 @Illinois St               4  IL Chicago                0           
+2019-03-19 @Incarnate Word            6  Texas St                  1           
+2019-03-19  Indiana                  15 @Indiana St               14           
+2019-03-19 @Kentucky                 16  Xavier                    3           
+2019-03-19 @Loy Marymount             5  San Diego St              1           
+2019-03-19 @Michigan                 12  W Michigan                5           
+2019-03-19 @Pepperdine               13  Minnesota                12           
+2019-03-19 @Missouri                  2  Murray St                 1           
+2019-03-19 @NC State                 11  Towson                    1           
+2019-03-19  Oklahoma                  8 @New Mexico                1           
+2019-03-19 @Old Dominion              3  Princeton                 1           
+2019-03-19  Radford                  14 @VMI                       5           
+2019-03-19 @Texas A&M                 8  Rice                      3           
+2019-03-19 @S Illinois                7  SIUE                      6           
+2019-03-19  UTRGV                     6 @TAM C. Christi            2           
+2019-03-19  TCU                       5  UT Arlington              3           
+2019-03-19  William & Mary            7 @VA Commonwealth           3           
+2019-03-19 @West Virginia            14  Youngstown St             1           
+2019-03-19 @Appalachian St           13  NC Central                0           
+2019-03-19 @Mississippi St           15  Ark Little Rock           4           
+2019-03-19  Austin Peay               5 @WKU                       3           
+2019-03-19 @Kennesaw                 10  Binghamton                1           
+2019-03-19 @Northeastern              4  Boston College            2           
+2019-03-19 @California               10  San Francisco             7           
+2019-03-19  Canisius                 15 @Kansas St                 3           
+2019-03-19 @Chicago St               10  N Illinois                8           
+2019-03-19  Dayton                   12 @Ohio                      5           
+2019-03-19  Maryland                 11 @Elon                      4           
+2019-03-19  Tennessee                 5 @ETSU                      1           
+2019-03-19  Lehigh                   20 @F Dickinson               6           
+2019-03-19 @George Mason              7  Georgetown                4           
+2019-03-19 @Virginia Tech            16  High Point                1           
+2019-03-19  McNeese St                1 @Houston                   0           
+2019-03-19  Lipscomb                  8 @MTSU                      6 O2        
+2019-03-19 @USC                       5  Long Beach St             2           
+2019-03-19 @Louisiana                 8  Northwestern LA           3           
+2019-03-19 @North Florida             7  South Florida             2           
+2019-03-19  SF Austin                 8 @Prairie View              5           
+2019-03-19 @Southern Miss             5  ULM                       4           
+2019-03-19 @Arizona                  14  New Mexico St            10           
+2019-03-19  Auburn                   13 @UAB                       5           
+2019-03-19  Louisville               12 @E Kentucky                8           
+2019-03-19 @Holy Cross               11  Massachusetts             2           
+2019-03-19 @Louisiana Tech           21  MS Valley St              1           
+2019-03-19 @SE Missouri St            7  Memphis                   6           
+2019-03-19  Tennessee Tech            7 @North Alabama             6           
+2019-03-19  Seton Hall               11 @Wagner                    7           
+2019-03-19 @TN Martin                 8  Alabama A&M               3           
+2019-03-19  Charleston So             7 @Savannah St               6 O3        
+2019-03-19 @LIU Brooklyn             16  Iona                      8           
+2019-03-19 @St John's                 7  Marist                    3           
+2019-03-19 @Clemson                  13  Col Charleston            1           
+2019-03-19 @SC Upstate                5  Lafayette                 0           
+2019-03-19  UCF                       9 @Florida St                7           
+2019-03-19 @Davidson                  4  Presbyterian              1           
+2019-03-19  Vanderbilt                3  Belmont                   0           
+2019-03-19  Dartmouth                 6  Bradley                   2           
+2019-03-19 @G Washington             18  Delaware St               1           
+2019-03-19  La Salle                  4 @Delaware                  2           
+2019-03-19 @Georgia                  11  Georgia St                1           
+2019-03-19  Georgia Tech             14 @Mercer                    8           
+2019-03-19 @Jackson St               10  Grambling                 2           
+2019-03-19 @N Colorado               17  CSU-Pueblo                7           
+2019-03-19 @UT San Antonio           14  Houston Bap               6           
+2019-03-19 @Wofford                   9  MD E Shore                0           
+2019-03-19  BYU                      14 @Utah Valley              13 O1        
+2019-03-19  Illinois                  4 @St Louis                  1           
+2019-03-19 @W Illinois               16  Iowa Wesleyan             3           
+2019-03-19 @Lamar                     6  Southern Univ             5           
+2019-03-19 @Liberty                   2  North Carolina            0           
+2019-03-19  Monmouth NJ              17 @Longwood                  3           
+2019-03-19  NC A&T                    8  UNC Greensboro            5           
+2019-03-19 @Nevada                    6  St Mary's CA              5           
+2019-03-19  New Orleans               7 @South Alabama             5           
+2019-03-19 @Ohio St                  10  N Kentucky                8           
+2019-03-19 @Sam Houston St            8  Baylor                    7           
+2019-03-19  Fresno St                17 @Pacific                   2           
+2019-03-19 @St Joseph's PA            4  Villanova                 0           
+2019-03-19  Albany NY                 9 @St Peter's                7           
+2019-03-19 @San Diego                 6  CS Fullerton              2           
+2019-03-19  UT San Antonio           14 @Houston Bap               6           
+2019-03-19 @Iowa                      7  Simpson IA                2           
+2019-03-19  Stony Brook              13 @Army                      4           
+2019-03-20 @Nebraska                 12  Air Force                 3           
+2019-03-20 @Morehead St               7  Alabama St                4           
+2019-03-20 @Central Conn              9  Albany NY                 6           
+2019-03-20 @Arizona St               15  Cal Baptist               9           
+2019-03-20 @Texas                     7  Arkansas                  6           
+2019-03-20 @Purdue                    9  Bowling Green             2           
+2019-03-20  Campbell                 12 @Duke                      6           
+2019-03-20 @Charleston So             3  Ga Southern               2           
+2019-03-20 @Iowa                      5  Chicago St                4           
+2019-03-20  Columbia                  4 @Miami FL                  2           
+2019-03-20 @Virginia                  6  Connecticut               3           
+2019-03-20  Fairfield                 9 @James Madison             2           
+2019-03-20 @Tulane                    7  Louisiana                 3           
+2019-03-20 @Troy                     12  Maine                     0           
+2019-03-20 @Missouri                 13  Murray St                 1           
+2019-03-20 @Navy                     11  Mt St Mary's              7           
+2019-03-20  Oklahoma                  8 @New Mexico                6           
+2019-03-20 @Old Dominion             15  Princeton                 1           
+2019-03-20 @VA Commonwealth           6  Towson                    0           
+2019-03-20 @SE Louisiana             13  Alcorn St                 3           
+2019-03-20 @Ball St                  12  PFW                      11           
+2019-03-20  Binghamton               12 @Kennesaw                  6           
+2019-03-20 @Boston College            7  Siena                     5           
+2019-03-20 @Kansas St                 6  Canisius                  5           
+2019-03-20 @Winthrop                  8  Citadel                   1           
+2019-03-20 @Pepperdine                9  CS Northridge             5           
+2019-03-20 @La Salle                 19  F Dickinson               9           
+2019-03-20 @Fordham                   9  Manhattan                 0           
+2019-03-20  Gardner Webb              5 @W Carolina                4           
+2019-03-20 @UMBC                      9  George Mason              3           
+2019-03-20  Harvard                   7  Rutgers                   6           
+2019-03-20  Kent                      6 @Pittsburgh                4           
+2019-03-20  Penn                     13 @Lehigh                    2           
+2019-03-20  Mississippi St            6 @Samford                   4           
+2019-03-20  Bryant                   23 @Hartford                  3           
+2019-03-20  Miami OH                  8 @E Kentucky                4           
+2019-03-20  Virginia Tech            11 @Marshall                  3           
+2019-03-20  Monmouth NJ               6 @Richmond                  6 O4        
+2019-03-20  Alabama A&M              16 @UAB                       8           
+2019-03-20  Maryland                 12 @Elon                      4           
+2019-03-20 @Rider                     6  LIU Brooklyn              5           
+2019-03-20  Sacred Heart              6 @Rhode Island              5           
+2019-03-20  Clemson                   4  Col Charleston            1           
+2019-03-20  G Washington              7 @Coppin St                 1           
+2019-03-20  Bradley                  10  Dartmouth                 2           
+2019-03-20 @Florida St                9  Florida Intl              6           
+2019-03-20 @Army                      9  Hofstra                   5           
+2019-03-20 @Wofford                  13  MD E Shore                5           
+2019-03-20 @St Louis                  8  Illinois                  3           
+2019-03-20 @Wichita St                3  Kansas                    2 O4        
+2019-03-20 @LSU                       5  Nicholls St               4 O1        
+2019-03-20 @Yale                     11  Quinnipiac                2           
+2019-03-20 @Wagner                   13  St Peter's                3           
+2019-03-20  TAM C. Christi            8 @Houston-Victoria          5           
+2019-03-20  South Alabama            22 @New Orleans               7           
+2019-03-20  St Joseph's PA            5 @Bucknell                  4           
+2019-03-20 @Mississippi              25  Ark Pine Bluff            0           
+2019-03-20 @TX Southern              15  Huston-Tillot             8           
+2019-03-20  WI Milwaukee             12  Milwaukee Eng             5           
+2019-03-20 @Bethune-Cookman           3  Stetson                   2           
+2019-03-20  Huston-Tillot             3 @TX Southern               2           
+2019-03-20 @Wright St                 8  Northwestern OH           1           
+2019-03-21 @Vanderbilt                5  Florida                   0           
+2019-03-21 @Texas Tech               11  Michigan                  2           
+2019-03-21  Bradley                   6  Dartmouth                 3           
+2019-03-21 @Ohio St                   6  Hawaii                    4           
+2019-03-21 @BYU                      10  Portland                  1           
+2019-03-22  Dallas Bap                4 @Air Force                 3 O3        
+2019-03-22  Appalachian St            6 @Louisiana                 5           
+2019-03-22 @UCLA                     10  Arizona                   5           
+2019-03-22 @Ga Southern               7  Ark Little Rock           6 O3        
+2019-03-22  Ball St                   8 @W Michigan                5           
+2019-03-22 @Baylor                    6  West Virginia             5           
+2019-03-22 @Grand Canyon              3  Cal Baptist               0           
+2019-03-22  Radford                   6 @Charleston So             5 O2        
+2019-03-22 @N Colorado                8  Chicago St                5           
+2019-03-22  VMI                       9 @Citadel                   5           
+2019-03-22 @Coastal Car               4  Troy                      2           
+2019-03-22  Connecticut               2 @Houston                   1           
+2019-03-22 @CS Sacramento             5  UTRGV                     4 O1        
+2019-03-22 @Duke                     16  Wake Forest               2           
+2019-03-22 @East Carolina            13  UCF                       8           
+2019-03-22 @Vanderbilt               15  Florida                   2           
+2019-03-22 @Fordham                   8  St Bonaventure            2           
+2019-03-22 @Pepperdine                4  Gonzaga                   2           
+2019-03-22 @Tulane                    6  Houston Bap               2           
+2019-03-22 @IL Chicago                6  Wright St                 1           
+2019-03-22 @Illinois                 14  Illinois St               3           
+2019-03-22 @Indiana                   3  Iowa                      2           
+2019-03-22  Indiana St                3  Rutgers                   1           
+2019-03-22 @Murray St                 8  Jacksonville St           7           
+2019-03-22 @Oklahoma St              11  Kansas St                 4           
+2019-03-22  Texas A&M                 5 @Kentucky                  3           
+2019-03-22  Louisiana Tech            5 @MTSU                      1           
+2019-03-22  NC State                  6 @Miami FL                  3           
+2019-03-22 @Nebraska                  4  Michigan St               1           
+2019-03-22 @Missouri                  2  Mississippi               1           
+2019-03-22 @UC Santa Barbara          7  Missouri St               3           
+2019-03-22 @S Illinois                9  Morehead St               8           
+2019-03-22 @UNLV                      7  Nevada                    6           
+2019-03-22  San Diego St              4 @New Mexico                2           
+2019-03-22 @Nicholls St               5  TAM C. Christi            3           
+2019-03-22 @Virginia Tech             4  North Carolina            1           
+2019-03-22  Purdue                    5 @Northwestern              2           
+2019-03-22 @Oral Roberts              1  S Dakota St               0           
+2019-03-22 @Virginia                 13  Pittsburgh                3           
+2019-03-22  UT San Antonio            4 @Rice                      2           
+2019-03-22 @Tennessee                15  South Carolina            5           
+2019-03-22 @TCU                       3  Texas                     2           
+2019-03-22 @Texas St                  5  ULM                       1           
+2019-03-22  UNC Wilmington            3 @Towson                    1           
+2019-03-22  Arizona St               12 @Oregon                    2           
+2019-03-22  Auburn                    6 @Mississippi St            5           
+2019-03-22  California                3 @Oregon St                 2           
+2019-03-22 @Cal Poly                  8  St Mary's CA              3           
+2019-03-22  UNC Asheville             3 @Campbell                  0           
+2019-03-22  SF Austin                 3 @Cent Arkansas             1           
+2019-03-22 @South Florida             4  Cincinnati                2           
+2019-03-22  C Michigan                5 @Ohio                      3           
+2019-03-22 @Col Charleston            3  Elon                      1           
+2019-03-22 @Davidson                 11  La Salle                  3           
+2019-03-22 @N Illinois                6  E Michigan                3           
+2019-03-22 @ETSU                     10  W Carolina                9           
+2019-03-22 @Samford                   8  Furman                    4           
+2019-03-22  Incarnate Word            4 @McNeese St                1           
+2019-03-22 @Jacksonville              6  Lipscomb                  5           
+2019-03-22 @Oklahoma                  5  Kansas                    1           
+2019-03-22 @Kennesaw                  3  North Alabama             1           
+2019-03-22  Lamar                     4 @Northwestern LA           3           
+2019-03-22 @Texas Tech               10  Michigan                  3           
+2019-03-22  N Dakota St               5 @W Illinois                4           
+2019-03-22 @NE Omaha                 11  PFW                       4           
+2019-03-22  Northeastern              7 @William & Mary            6           
+2019-03-22 @Southern Miss            11  Old Dominion              0           
+2019-03-22 @Stony Brook              12  Sacred Heart              9           
+2019-03-22 @San Diego                10  San Francisco             3           
+2019-03-22 @UC Irvine                 4  Washington St             1           
+2019-03-22 @SE Louisiana             14  Abilene Chr               1           
+2019-03-22  MS Valley St             15 @Alcorn St                 5           
+2019-03-22  Austin Peay               4 @SE Missouri St            2           
+2019-03-22  Marshall                 12 @Charlotte                 6           
+2019-03-22  CS Bakersfield            9 @New Mexico St             4           
+2019-03-22 @E Kentucky               21  TN Martin                 6           
+2019-03-22 @Xavier                   11  Evansville                8           
+2019-03-22  FL Atlantic               9 @UAB                       6           
+2019-03-22 @North Florida             7  FL Gulf Coast             4           
+2019-03-22 @Florida Intl              2  WKU                       1           
+2019-03-22 @Fresno St                 3  San Jose St               1           
+2019-03-22  Hartford                 14 @Georgetown                1           
+2019-03-22 @VA Commonwealth           5  Massachusetts             2           
+2019-03-22  WI Milwaukee             15 @N Kentucky               12           
+2019-03-22  TX Southern              34 @Prairie View              2           
+2019-03-22  Ark Pine Bluff            7 @Alabama A&M               3           
+2019-03-22  E Illinois               13 @Tennessee Tech            2           
+2019-03-22  Rhode Island             19 @G Washington              1           
+2019-03-22  LIU Brooklyn             11 @Villanova                 3           
+2019-03-22  Marist                    8 @Richmond                  2           
+2019-03-22 @Savannah St               4  NC Central                3           
+2019-03-22 @CS Northridge            14  Santa Clara               8           
+2019-03-22  High Point                4 @SC Upstate                2           
+2019-03-22 @Presbyterian              6  Gardner Webb              5           
+2019-03-22 @Seattle                   8  Utah Valley               5           
+2019-03-22  Clemson                   8 @Boston College            1           
+2019-03-22 @Belmont                   5  SIUE                      3           
+2019-03-22 @Delaware St               5  Coppin St                 1           
+2019-03-22 @Creighton                 3  Maryland                  2           
+2019-03-22  Dayton                    3 @St Louis                  2           
+2019-03-22  Delaware                  5 @James Madison             3           
+2019-03-22 @Florida A&M               2  Wofford                   1           
+2019-03-22 @St Joseph's PA           11  George Mason              5           
+2019-03-22  UT Arlington             14 @Georgia St                6           
+2019-03-22  Georgia Tech              3 @Louisville                1           
+2019-03-22  LSU                       1 @Georgia                   0           
+2019-03-22 @Southern Univ            18  Grambling                 8           
+2019-03-22 @Ohio St                   6  Hawaii                    5           
+2019-03-22 @Arkansas St               6  South Alabama             0           
+2019-03-22  Arkansas                 12 @Alabama                   3           
+2019-03-22 @Jackson St               11  Alabama St                4           
+2019-03-22 @Liberty                   8  NJIT                      2           
+2019-03-22  Winthrop                 12 @Longwood                  4           
+2019-03-22 @Loy Marymount             7  Pacific                   1           
+2019-03-22 @MD E Shore                3  Norfolk St                2           
+2019-03-22 @Wichita St                7  Memphis                   3           
+2019-03-22  UNC Greensboro            9 @Mercer                    4           
+2019-03-22  Sam Houston St            6 @New Orleans               2           
+2019-03-22  NC A&T                    3 @Bethune-Cookman           0           
+2019-03-22 @BYU                       3  Portland                  1           
+2019-03-22 @Washington                7  USC                       1           
+2019-03-22 @Stanford                  7  Utah                      4           
+2019-03-22  CS Fullerton              8 @Long Beach St             3           
+2019-03-22 @Nebraska                  5  Michigan St               2           
+2019-03-23  Dallas Bap                6 @Air Force                 5           
+2019-03-23 @Alabama                  10  Arkansas                  0           
+2019-03-23  Albany NY                 5 @Manhattan                 2           
+2019-03-23 @Louisiana                 7  Appalachian St            4           
+2019-03-23 @UCLA                     12  Arizona                  10           
+2019-03-23  Ark Little Rock          11 @Ga Southern              10 O3        
+2019-03-23  Ball St                  10 @W Michigan                3           
+2019-03-23 @Baylor                   12  West Virginia             0           
+2019-03-23  Maine                     0 @Binghamton                0 Sch       
+2019-03-23 @Bowling Green            10  Toledo                    6           
+2019-03-23 @Bryant                   12  Central Conn              3           
+2019-03-23  Bucknell                  2 @Army                      0           
+2019-03-23  Butler                    6 @Valparaiso                4           
+2019-03-23  Cal Baptist               8 @Grand Canyon              0           
+2019-03-23 @Cal Poly                  6  St Mary's CA              2           
+2019-03-23  Radford                   7 @Charleston So             1           
+2019-03-23 @Citadel                   1  VMI                       0           
+2019-03-23 @Coastal Car               9  Troy                      7           
+2019-03-23 @Columbia                  3  Cornell                   0           
+2019-03-23 @Houston                   5  Connecticut               4           
+2019-03-23 @CS Sacramento             7  UTRGV                     1           
+2019-03-23  Wake Forest               9 @Duke                      8           
+2019-03-23 @East Carolina             7  UCF                       4           
+2019-03-23 @Iona                      4  Fairfield                 3           
+2019-03-23 @Vanderbilt               14  Florida                   4           
+2019-03-23 @Fordham                   8  St Bonaventure            1           
+2019-03-23 @Pepperdine                3  Gonzaga                   1           
+2019-03-23 @Tulane                    3  Houston Bap               2 O2        
+2019-03-23  Wright St                 7 @IL Chicago                1           
+2019-03-23 @Illinois                  4  Illinois St               2           
+2019-03-23 @Indiana                  13  Iowa                      1           
+2019-03-23  Indiana St                7  Rutgers                   5           
+2019-03-23  Jacksonville St           4 @Murray St                 2           
+2019-03-23 @Oklahoma St               5  Kansas St                 4           
+2019-03-23  Miami OH                  3 @Kent                      2           
+2019-03-23  Texas A&M                 9 @Kentucky                  3           
+2019-03-23  Lafayette                 4 @Lehigh                    1           
+2019-03-23 @MTSU                      4  Louisiana Tech            1           
+2019-03-23  MA Lowell                 8 @UMBC                      3           
+2019-03-23  NC State                  7 @Miami FL                  6           
+2019-03-23  Michigan                 16  Stetson                   6           
+2019-03-23  Michigan St               0 @Nebraska                  0 Sch       
+2019-03-23  Minnesota                 5 @Penn St                   1           
+2019-03-23  Mississippi               3 @Missouri                  0           
+2019-03-23 @UC Santa Barbara          5  Missouri St               3           
+2019-03-23  Morehead St               7 @S Illinois                0           
+2019-03-23  Navy                      0 @Holy Cross                0 Sch       
+2019-03-23 @UNLV                      8  Nevada                    5           
+2019-03-23  San Diego St             19 @New Mexico                3           
+2019-03-23  TAM C. Christi            4 @Nicholls St               3 O1        
+2019-03-23  North Carolina            7 @Virginia Tech             5           
+2019-03-23 @Northwestern              2  Purdue                    1           
+2019-03-23  S Dakota St               2 @Oral Roberts              1           
+2019-03-23 @Virginia                  7  Pittsburgh                5           
+2019-03-23  Dartmouth                23 @Princeton                 3           
+2019-03-23  UT San Antonio            9 @Rice                      3           
+2019-03-23 @Rider                    13  Niagara                   5           
+2019-03-23 @Canisius                 14  Siena                    12           
+2019-03-23  South Carolina            3 @Tennessee                 2           
+2019-03-23  Texas                    13 @TCU                       1           
+2019-03-23 @Texas St                  6  ULM                       5           
+2019-03-23  UNC Wilmington            8 @Towson                    4           
+2019-03-23  MA Lowell                 8 @UMBC                      3           
+2019-03-23  Yale                     15 @Brown                     3           
+2019-03-23 @Oregon                    5  Arizona St                4 O3        
+2019-03-23 @Mississippi St           15  Auburn                    2           
+2019-03-23 @Oregon St                 3  California                2           
+2019-03-23 @Campbell                 21  UNC Asheville             1           
+2019-03-23 @Cent Arkansas             7  SF Austin                 0           
+2019-03-23  Cincinnati                6 @South Florida             5           
+2019-03-23 @Ohio                     12  C Michigan               11           
+2019-03-23  Elon                      7 @Col Charleston            2           
+2019-03-23 @Davidson                  6  La Salle                  0           
+2019-03-23 @N Illinois                4  E Michigan                3           
+2019-03-23 @ETSU                      5  W Carolina                4           
+2019-03-23 @Mt St Mary's             11  F Dickinson               3           
+2019-03-23 @Samford                  14  Furman                    4           
+2019-03-23  Harvard                  12 @Penn                      9           
+2019-03-23  Incarnate Word            6 @McNeese St                5 O1        
+2019-03-23 @Jacksonville              5  Lipscomb                  4           
+2019-03-23 @Oklahoma                  4  Kansas                    3           
+2019-03-23 @Kennesaw                  7  North Alabama             6           
+2019-03-23 @Northwestern LA           5  Lamar                     2           
+2019-03-23 @Texas Tech                8  Michigan                  5           
+2019-03-23  N Dakota St              11 @W Illinois                1           
+2019-03-23 @NE Omaha                  6  PFW                       1           
+2019-03-23  Northeastern              9 @William & Mary            4           
+2019-03-23 @Youngstown St             6  Oakland                   5           
+2019-03-23 @Southern Miss            14  Old Dominion              4           
+2019-03-23 @Stony Brook               4  Sacred Heart              1           
+2019-03-23  San Francisco            10 @San Diego                 4           
+2019-03-23 @Canisius                 14  Siena                    12           
+2019-03-23  St Mary's CA              7 @Cal Poly                  1           
+2019-03-23 @UC Irvine                 5  Washington St             1           
+2019-03-23 @SE Louisiana             12  Abilene Chr               9           
+2019-03-23  MS Valley St              9 @Alcorn St                 2           
+2019-03-23 @SE Missouri St            7  Austin Peay               4           
+2019-03-23  Marshall                  5 @Charlotte                 4           
+2019-03-23  Chicago St                0 @N Colorado                0 Sch       
+2019-03-23 @Columbia                  3  Cornell                   0           
+2019-03-23 @New Mexico St            23  CS Bakersfield            1           
+2019-03-23 @E Kentucky               14  TN Martin                 4           
+2019-03-23 @Xavier                    5  Evansville                2           
+2019-03-23  FL Atlantic               6 @UAB                       2           
+2019-03-23  FL Gulf Coast             5 @North Florida             2           
+2019-03-23  WKU                       5 @Florida Intl              4           
+2019-03-23  San Jose St               2 @Fresno St                 1           
+2019-03-23  Hartford                  2 @Georgetown                1           
+2019-03-23  Hofstra                   0 @St John's                 0 Sch       
+2019-03-23 @VA Commonwealth           7  Massachusetts             2           
+2019-03-23  Wagner                   13 @Monmouth NJ               4           
+2019-03-23  Navy                      0 @Holy Cross                0 Sch       
+2019-03-23  WI Milwaukee              5 @N Kentucky                3           
+2019-03-23 @Prairie View              5  TX Southern               3           
+2019-03-23  Seton Hall               10  Wagner                    0           
+2019-03-23  Ark Pine Bluff           13 @Alabama A&M              12           
+2019-03-23  E Illinois               13 @Tennessee Tech           12           
+2019-03-23 @G Washington              4  Rhode Island              3           
+2019-03-23  Lafayette                10 @Lehigh                    9           
+2019-03-23  LIU Brooklyn              3 @Villanova                 0           
+2019-03-23  Marist                   11 @Richmond                  1           
+2019-03-23 @Savannah St               4  NC Central                1           
+2019-03-23 @CS Northridge             2  Santa Clara               0           
+2019-03-23  High Point                3 @SC Upstate                1           
+2019-03-23  Gardner Webb              5 @Presbyterian              4           
+2019-03-23  Utah Valley               4 @Seattle                   2           
+2019-03-23  Clemson                   9 @Boston College            5           
+2019-03-23  SIUE                      3 @Belmont                   1           
+2019-03-23  Coppin St                12 @Delaware St              11           
+2019-03-23 @Creighton                 5  Maryland                  3           
+2019-03-23 @St Louis                  4  Dayton                    3           
+2019-03-23 @James Madison            11  Delaware                  2           
+2019-03-23  Wofford                  14 @Florida A&M              11           
+2019-03-23  Florida St                7 @Notre Dame                1           
+2019-03-23 @St Joseph's PA           18  George Mason              9           
+2019-03-23  UT Arlington              4 @Georgia St                3           
+2019-03-23  Georgia Tech              4 @Louisville                0           
+2019-03-23 @Georgia                   2  LSU                       0           
+2019-03-23  Bradley                   3  Rowan                     0           
+2019-03-23 @Southern Univ            15  Grambling                13           
+2019-03-23 @Ohio St                   7  Hawaii                    5           
+2019-03-23  South Alabama            11 @Arkansas St               6 O1        
+2019-03-23  Alabama St                9 @Jackson St                1           
+2019-03-23  NJIT                      9 @Liberty                   2           
+2019-03-23  Winthrop                  9 @Longwood                  3           
+2019-03-23 @Loy Marymount             6  Pacific                   5 O2        
+2019-03-23 @MD E Shore               18  Norfolk St               14           
+2019-03-23 @Wichita St                8  Memphis                   4           
+2019-03-23 @Mercer                    8  UNC Greensboro            1           
+2019-03-23 @New Orleans               6  Sam Houston St            4 O2        
+2019-03-23  NC A&T                    7 @Bethune-Cookman           2           
+2019-03-23 @Penn                     16  Harvard                  12           
+2019-03-23 @BYU                      11  Portland                  1           
+2019-03-23  Dartmouth                10 @Princeton                 8           
+2019-03-23  Niagara                   1 @Rider                     0           
+2019-03-23  Indiana St                7  Rutgers                   5           
+2019-03-23  Maine                     0 @Binghamton                0 Sch       
+2019-03-23 @Washington                4  USC                       3 O1        
+2019-03-23 @Stanford                  7  Utah                      6 O3        
+2019-03-23 @Stony Brook               4  Sacred Heart              1           
+2019-03-23  Yale                     15 @Brown                     3           
+2019-03-23  Bucknell                  2 @Army                      0           
+2019-03-23  CS Fullerton              4 @Long Beach St             3           
+2019-03-23 @Quinnipiac               13  St Peter's                0           
+2019-03-23 @Quinnipiac               13  St Peter's                0           
+2019-03-23  F Dickinson              12 @Mt St Mary's              9           
+2019-03-23 @Notre Dame               12  Florida St                3           
+2019-03-23  Wright St                10 @IL Chicago                3           
+2019-03-23 @Kent                     12  Miami OH                  2           
+2019-03-23 @W Illinois                9  N Dakota St               6           
+2019-03-23  Oakland                   7 @Youngstown St             5 O2        
+2019-03-23 @Bowling Green             9  Toledo                    6           
+2019-03-23 @Valparaiso                5  Butler                    2           
+2019-03-23 @Army                     11  Bucknell                  1           
+2019-03-23  Hartford                 14 @Georgetown                1           
+2019-03-23  Rhode Island             19 @G Washington              1           
+2019-03-23 @MD E Shore                3  Norfolk St                2           
+2019-03-24  Dallas Bap               30 @Air Force                 7           
+2019-03-24  Arkansas                 10 @Alabama                   2           
+2019-03-24  Appalachian St            6 @Louisiana                 5           
+2019-03-24 @UCLA                      3  Arizona                   1           
+2019-03-24 @Ga Southern              15  Ark Little Rock          10           
+2019-03-24  Ball St                  20 @W Michigan               15           
+2019-03-24 @Baylor                   10  West Virginia             4           
+2019-03-24  Maine                     8 @Binghamton                0           
+2019-03-24 @Bowling Green             6  Toledo                    5           
+2019-03-24  Central Conn              6 @Bryant                    5           
+2019-03-24  Bucknell                  8 @Holy Cross                4           
+2019-03-24  Butler                    9 @Valparaiso                2           
+2019-03-24  Cal Baptist               4 @Grand Canyon              1           
+2019-03-24  Radford                   9 @Charleston So             6           
+2019-03-24 @N Colorado               15  Chicago St                9           
+2019-03-24 @Citadel                   3  VMI                       2 O1        
+2019-03-24  Troy                     10 @Coastal Car               8           
+2019-03-24  Notre Dame                0 @Concord                   0 Sch       
+2019-03-24  Connecticut               9 @Houston                   3           
+2019-03-24  UTRGV                     5 @CS Sacramento             3           
+2019-03-24  Wake Forest               5 @Duke                      4 O3        
+2019-03-24 @East Carolina             6  UCF                       5           
+2019-03-24  St Bonaventure            1 @Fordham                   0           
+2019-03-24  Gonzaga                   3 @Pepperdine                2           
+2019-03-24 @Tulane                    3  Houston Bap               1           
+2019-03-24  Wright St                 0 @IL Chicago                0 Sch       
+2019-03-24 @Illinois                 12  Illinois St               1           
+2019-03-24 @Indiana                   7  Iowa                      1           
+2019-03-24  Indiana St                4  Rutgers                   3           
+2019-03-24 @Murray St                 9  Jacksonville St           8           
+2019-03-24 @Oklahoma St               8  Kansas St                 4           
+2019-03-24  Miami OH                  5 @Kent                      1           
+2019-03-24  Texas A&M                17 @Kentucky                  5           
+2019-03-24 @Lehigh                   16  Lafayette                 9           
+2019-03-24  Louisiana Tech           10 @MTSU                      5           
+2019-03-24  MA Lowell                 8 @UMBC                      2           
+2019-03-24  NC State                  6 @Miami FL                  4           
+2019-03-24 @Nebraska                  6  Michigan St               2           
+2019-03-24  Minnesota                 8 @Penn St                   6           
+2019-03-24 @Missouri                  8  Mississippi               5           
+2019-03-24 @UC Santa Barbara         11  Missouri St               1           
+2019-03-24 @S Illinois                5  Morehead St               4 O2        
+2019-03-24  Navy                      5 @Army                      2           
+2019-03-24  Nevada                    7 @UNLV                      6 O1        
+2019-03-24 @New Mexico               13  San Diego St              4           
+2019-03-24 @Nicholls St               6  TAM C. Christi            3           
+2019-03-24  North Carolina            5 @Virginia Tech             2           
+2019-03-24  Purdue                    9 @Northwestern              7           
+2019-03-24  S Dakota St               9 @Oral Roberts              8           
+2019-03-24 @Virginia                  5  Pittsburgh                2           
+2019-03-24 @Rice                      8  UT San Antonio            6           
+2019-03-24 @Tennessee                 6  South Carolina            3           
+2019-03-24 @TCU                      12  Texas                     8           
+2019-03-24 @Texas St                 13  ULM                       1           
+2019-03-24  UNC Wilmington           11 @Towson                    6           
+2019-03-24  Arizona St                7 @Oregon                    3           
+2019-03-24 @Mississippi St           20  Auburn                   15           
+2019-03-24 @Brown                     8  Yale                      7           
+2019-03-24 @Oregon St                10  California                5           
+2019-03-24  St Mary's CA              8 @Cal Poly                  2           
+2019-03-24 @Campbell                  6  UNC Asheville             3           
+2019-03-24 @Canisius                  4  Siena                     3           
+2019-03-24 @Cent Arkansas             9  SF Austin                 3           
+2019-03-24  Cincinnati                4 @South Florida             1           
+2019-03-24  C Michigan                6 @Ohio                      2           
+2019-03-24  Elon                      8 @Col Charleston            6           
+2019-03-24 @Davidson                 16  La Salle                  8           
+2019-03-24 @N Illinois                9  E Michigan                4           
+2019-03-24 @ETSU                     10  W Carolina                3           
+2019-03-24  Fairfield                 3 @Iona                      1           
+2019-03-24 @Mt St Mary's             15  F Dickinson               7           
+2019-03-24 @Samford                   3  Furman                    0           
+2019-03-24  Harvard                   8 @Penn                      6           
+2019-03-24  Incarnate Word            8 @McNeese St                6           
+2019-03-24 @Jacksonville              3  Lipscomb                  2           
+2019-03-24 @Oklahoma                 10  Kansas                    5           
+2019-03-24 @Kennesaw                  8  North Alabama             3           
+2019-03-24 @Northwestern LA          10  Lamar                     6           
+2019-03-24  N Dakota St               0 @W Illinois                0 Sch       
+2019-03-24 @NE Omaha                 26  PFW                       0           
+2019-03-24  Niagara                  12 @Rider                     9           
+2019-03-24 @William & Mary           15  Northeastern              4           
+2019-03-24  Oakland                   8 @Youngstown St             0           
+2019-03-24 @Southern Miss             9  Old Dominion              0           
+2019-03-24  Stony Brook               8 @Sacred Heart              1           
+2019-03-24 @San Diego                 6  San Francisco             4           
+2019-03-24  Stetson                   7 @Texas Tech                5 O1        
+2019-03-24 @UC Irvine                 8  Washington St             4           
+2019-03-24 @SE Louisiana              8  Abilene Chr               3           
+2019-03-24  MS Valley St             14 @Alcorn St                 2           
+2019-03-24  Austin Peay              10 @SE Missouri St            2           
+2019-03-24 @Charlotte                 8  Marshall                  5           
+2019-03-24 @Columbia                 13  Cornell                   8           
+2019-03-24 @New Mexico St            12  CS Bakersfield            9           
+2019-03-24 @E Kentucky                8  TN Martin                 5           
+2019-03-24  Evansville               10 @Xavier                    2           
+2019-03-24 @UAB                       6  FL Atlantic               5           
+2019-03-24 @North Florida            14  FL Gulf Coast             8           
+2019-03-24  WKU                      15 @Florida Intl              1           
+2019-03-24  San Jose St               7 @Fresno St                 5           
+2019-03-24  Hartford                  4 @Georgetown                2           
+2019-03-24 @St John's                 9  Hofstra                   0           
+2019-03-24 @Holy Cross                6  Bucknell                  5           
+2019-03-24 @VA Commonwealth           3  Massachusetts             1           
+2019-03-24 @Monmouth NJ               6  Wagner                    2           
+2019-03-24  WI Milwaukee              6 @N Kentucky                2           
+2019-03-24  TX Southern               7 @Prairie View              5           
+2019-03-24 @Alabama A&M               6  Ark Pine Bluff            2           
+2019-03-24  E Illinois               15 @Tennessee Tech            5           
+2019-03-24  Fairmont St               0 @Col Charleston            0 Sch       
+2019-03-24  Rhode Island              6 @G Washington              1           
+2019-03-24  Lafayette                14 @Lehigh                    2           
+2019-03-24  LIU Brooklyn              4 @Villanova                 1           
+2019-03-24  Marist                   10 @Richmond                  5           
+2019-03-24 @Savannah St               5  NC Central                3           
+2019-03-24 @CS Northridge             7  Santa Clara               2           
+2019-03-24 @SC Upstate                7  High Point                5           
+2019-03-24 @Presbyterian             11  Gardner Webb              6           
+2019-03-24  Utah Valley               6 @Seattle                   5           
+2019-03-24 @Manhattan                 5  Albany NY                 3           
+2019-03-24 @Boston College            3  Clemson                   2           
+2019-03-24 @Belmont                  10  SIUE                      7           
+2019-03-24  Coppin St                10 @Delaware St               5           
+2019-03-24 @Creighton                 8  Maryland                  6           
+2019-03-24 @Princeton                 8  Dartmouth                 2           
+2019-03-24  Dayton                    4 @St Louis                  2 O3        
+2019-03-24 @James Madison             7  Delaware                  4           
+2019-03-24 @Florida A&M               9  Wofford                   4           
+2019-03-24  Florida St                3 @Notre Dame                1 O1        
+2019-03-24 @St Joseph's PA           14  George Mason              3           
+2019-03-24  UT Arlington              4 @Georgia St                2           
+2019-03-24 @Louisville                5  Georgia Tech              4           
+2019-03-24 @Georgia                   9  LSU                       7           
+2019-03-24 @Southern Univ            13  Grambling                 8           
+2019-03-24  Hawaii                   15 @Ohio St                   3           
+2019-03-24 @Arkansas St               8  South Alabama             1           
+2019-03-24  Alabama St                7 @Jackson St                6           
+2019-03-24 @Liberty                   8  NJIT                      1           
+2019-03-24  Winthrop                 10 @Longwood                  3           
+2019-03-24  Pacific                   5 @Loy Marymount             2           
+2019-03-24  Norfolk St                9 @MD E Shore                6           
+2019-03-24  Memphis                   6 @Wichita St                3           
+2019-03-24  UNC Greensboro            5 @Mercer                    3           
+2019-03-24  Sam Houston St            8 @New Orleans               2           
+2019-03-24  NC A&T                    8 @Bethune-Cookman           7 O2        
+2019-03-24 @Washington                3  USC                       2 O1        
+2019-03-24 @Stanford                  7  Utah                      3           
+2019-03-24 @Army                      5  Navy                      2           
+2019-03-24  CS Fullerton              5 @Long Beach St             1           
+2019-03-24 @Quinnipiac                5  St Peter's                4           
+2019-03-24  Cornell                   4 @Columbia                  3           
+2019-03-24 @Manhattan                 6  Albany NY                 4           
+2019-03-24 @UMBC                      8  MA Lowell                 5           
+2019-03-24  Minnesota                 7 @Penn St                   5           
+2019-03-24 @St John's                 9  Hofstra                   1           
+2019-03-24  Central Conn              6 @Bryant                    5           
+2019-03-24  Seton Hall               12 @Monmouth NJ               2           
+2019-03-24 @Canisius                  5  Siena                     4           
+2019-03-24  Chicago St                6 @N Colorado                5           
+2019-03-24  Fairfield                 3 @Iona                      0           
+2019-03-24 @Binghamton                4  Maine                     1           
+2019-03-24 @Quinnipiac                2  St Peter's                0           
+2019-03-24  Yale                     11 @Brown                     3           
+2019-03-24 @Bryant                   14  Central Conn              4           
+2019-03-25  Arizona                   0 @San Diego St              0 Sch       
+2019-03-25  Stetson                   0 @Texas Tech                0 Sch       
+2019-03-25  Washington St             0 @Loy Marymount             0 Sch       
+2019-03-25  Navy                      0 @Holy Cross                0 Sch       
+2019-03-25  Navy                      0 @Holy Cross                0 Sch       
