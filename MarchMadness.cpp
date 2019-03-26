@@ -21,22 +21,34 @@ class MarchMadness{
         // while(inputFile >> date >> team1 >> team1Score >> team2 >> team2Score){
         //     cout << date << '\t' << team1 << '\t' << team1Score << '\t' << team2 << '\t' << team2Score << endl;
         // }
-        printFile();
+
+        //printFile();
+        printFile2();
         outputFile.close();
     }
 
-    // For testing purposes
+    // Prints the contents of the file "ncaaD1.txt" in the correct format.
+    // Prints based on line presence.
     void printFile(){
-        string line;
         ifstream inputFile("ncaaD1.txt"); // Creates a file to read from and opens it
 
         if(inputFile.is_open()){ // Check if the file is open
+            string line;
             while(getline(inputFile,line)){ // While there is a line of text/strings...
                 cout << line << endl;
             }
+            inputFile.close(); // Close the file
         }
+        else{
+            cout << "Error: Problem with opening the file" << endl;
+        }
+    }
 
-        inputFile.close(); // Close the file
+    // Prints the contents of the file "ncaaD1.txt" in the correct format.
+    // Prints based on word presence.
+    void printFile2(){
+        ifstream inputFile("ncaaD1.txt");
+
     }
 };
 
