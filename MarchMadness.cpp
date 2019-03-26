@@ -102,10 +102,23 @@ class MarchMadness{
                 else{flag = word; setDate = false;} // Else the word is a flag
                 //inputFile.putback(-(word.length()+flag.length()));
                 // ------ Step7 ------
+                // adjust the tab length so the printed format looks more readable
+                string teamTab1 = "\t\t";
+                if(team1.length() <= 8){
+                    teamTab1 += "\t";
+                }
+                string teamTab2 = "\t\t";
+                if(team2.length() <= 8){
+                    teamTab2 += "\t";
+                }
+                //@Houston-Victoria is 17 characters long which is the only longest name in the list
+                if(team2.length()>=17){
+                    teamTab2 = "\t";
+                }
                 cout << "Date: " << date << '\t'
-                     << "Team1: " << team1 << '\t' << '\t'
+                     << "Team1: " << team1 << teamTab1
                      << "Score1: " << score1 << '\t'
-                     << "Team2: " << team2 << '\t' << '\t'
+                     << "Team2: " << team2 << teamTab2
                      << "Score2: " << score2 << '\t'
                      << "Flag: " << flag << endl;
 
