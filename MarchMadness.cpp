@@ -46,6 +46,9 @@ class MarchMadness{
 
     // Prints the contents of the file "ncaaD1.txt" in the correct format.
     // Prints based on word presence.
+    // NOTE: This function works only for "ncaaD1.txt". Using any other file may result in at least three changes to this function.
+    // These changes relate to the number of if-statements for checking the team name length,
+    // changing the year, and changing the tab length.
     void printFile2(){
         ifstream inputFile("ncaaD1.txt"); // Creates a file to read from and opens it
         if(inputFile.is_open()){ // Check if the file is open
@@ -74,7 +77,7 @@ class MarchMadness{
                     team1.append(" " + word); // append the word to the team name; the team name should now be 2 words long
                     inputFile >> word; // Go to the next word to check if the second word is NOT an int
                     if(!isNumber(word)){ // If the second word is ALSO NOT an int...
-                        team1.append("" + word); // append the word to the team name; the team name should now be 3 words long
+                        team1.append(" " + word); // append the word to the team name; the team name should now be 3 words long
                         inputFile >> word; // Go to the next word which is the score
                         score1 = word; // Set the score of team1; the team has 3 words in its name
                         inputFile >> word;
@@ -88,12 +91,12 @@ class MarchMadness{
                     team2.append(" " + word); // append the word to the team name; the team name should now be 2 words long
                     inputFile >> word; // Go to the next word to check if the second word is NOT an int
                     if(!isNumber(word)){ // If the second word is ALSO NOT an int...
-                        team2.append("" + word); // append the word to the team name; the team name should now be 3 words long
+                        team2.append(" " + word); // append the word to the team name; the team name should now be 3 words long
                         inputFile >> word; // Go to the next word which is the score
-                        score2 = word; // Set the score of team1; the team has 3 words in its name
+                        score2 = word; // Set the score of team2; the team has 3 words in its name
                         inputFile >> word;
-                    } else {score2 = word; inputFile >> word;} // Else Set the score of team1; the team has 2 words in its name
-                } else {score2 = word; inputFile >> word;} //Else Set the score of team1; the team has 1 word in its name
+                    } else {score2 = word; inputFile >> word;} // Else Set the score of team2; the team has 2 words in its name
+                } else {score2 = word; inputFile >> word;} //Else Set the score of team2; the team has 1 word in its name
                 // ------ Step6 ------
                 if(word.substr(0,4) == "2019"){ // If the length of the word is equal to 10...
                     flag = "N/A";
@@ -104,17 +107,13 @@ class MarchMadness{
                 // ------ Step7 ------
                 // adjust the tab length so the printed format looks more readable
                 string teamTab1 = "\t\t";
-                if(team1.length() <= 8){
-                    teamTab1 += "\t";
-                }
+                if(team1.length() <= 8) {teamTab1 += "\t";}
+                //@UC Santa Barbara is 17 characters long which is the only longest name in the list of Team1
+                if(team1.length()>=17) {teamTab1 = "\t";}
                 string teamTab2 = "\t\t";
-                if(team2.length() <= 8){
-                    teamTab2 += "\t";
-                }
-                //@Houston-Victoria is 17 characters long which is the only longest name in the list
-                if(team2.length()>=17){
-                    teamTab2 = "\t";
-                }
+                if(team2.length() <= 8) {teamTab2 += "\t";}
+                //@Houston-Victoria is 17 characters long which is the only longest name in the list of Team2
+                if(team2.length()>=17) {teamTab2 = "\t";}
                 cout << "Date: " << date << '\t'
                      << "Team1: " << team1 << teamTab1
                      << "Score1: " << score1 << '\t'
@@ -122,8 +121,8 @@ class MarchMadness{
                      << "Score2: " << score2 << '\t'
                      << "Flag: " << flag << endl;
 
-                if(setDate == true){
-                    date = word;
+                if(setDate == true){ // The word you are currently on is the date of the next line.
+                    date = word;     // When you repeat the while loop, you will be on the name of team1, not the date
                 }
             }
             inputFile.close(); // Close the file
