@@ -7,13 +7,24 @@
 using namespace std;
 
 class Team {
-	string location, teamName;
+	string teamName; //note: the team's name is for all intents and purposes equal to the location
 	map<Team, int[]> teamsPlayed;
 	double rating;
 	int wl;
-	Team(string name, string loc) {
+	Team(string name) {
 		teamName = name;
-		location = loc;
+        rating = 0.0;
+        wl = 0;
 	}
+
+    double getRating()
+    {
+        return rating;
+    }
+
+    void setRating(double rating)
+    {
+        this.rating = rating;
+    }
 
 };
