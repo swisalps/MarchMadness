@@ -54,7 +54,7 @@ class MarchMadness{
         ofstream writer("ncaaD1out.txt"); // Created to check if the printFile is working since terminal is too small
         if(inputFile.is_open() && writer.is_open()){ // Check if the file is open
             string word;
-            string date, team1, score1, team2, score2, flag;
+            string date, team1, score1, team2, score2, flag, venue;
             bool setDate = false;
             while(inputFile >> word){
                 // 1) Get the date
@@ -104,14 +104,22 @@ class MarchMadness{
                     flag = "N/A";
                     setDate = true; // the current word you are on is the date of the next line
                 }
-                else{ // Else the current word is not a date but instead a flag and/or a city/state
-                    if(word.length() <= ){
+                else{ // Else the current word is not a date but instead a flag and/or a venue
+                    // There is a flag
+                    if(word.length() <= 3 && (word.substr(0,1) == "P"|| word.substr(0,1) == "F" || word.substr(0,1) == "S" || word.substr(0,1) == "E"|| word.substr(0,1) == "O")){
+                        flag = word;
+                        inputFile >> word;
+                    }
+                    else{ // There is no flag; only a venue
+                        flag = "N/A";
+
+                    }
+                    if(){ // Check if there is aa venue in addition to a flag
 
                     }
                     flag = word;
                     setDate = false;
                 }
-                //inputFile.putback(-(word.length()+flag.length()));
                 // ------ Step8 ------
                 // adjust the tab length so the printed format looks more readable
                 string teamTab1 = "\t\t";
@@ -127,13 +135,6 @@ class MarchMadness{
                 if(team2.length() <= 12) {teamTab2 += "\t";}
                 //@Houston-Victoria is 17 characters long which is the only longest name in the list of Team2
                 if(team2.length()>=17) {teamTab2 = "\t";}
-                cout << "Date: " << date << '\t'
-                     << "Team1: " << team1 << teamTab1
-                     << "Score1: " << score1 << '\t'
-                     << "Team2: " << team2 << teamTab2
-                     << "Score2: " << score2 << '\t'
-                     << "Flag: " << flag << endl;
-
                 // Write to output file
                 writer << "Date: " << date << '\t'
                        << "Team1: " << team1 << teamTab1
