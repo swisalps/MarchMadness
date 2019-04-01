@@ -50,8 +50,9 @@ class MarchMadness{
     // These changes relate to the number of if-statements for checking the team name length,
     // changing the year, and changing the tab length.
     void printFile2(){
-        ifstream inputFile("ncaaD1.txt"); // Creates a file to read from and opens it
-        if(inputFile.is_open()){ // Check if the file is open
+        ifstream inputFile("ncaaD1v2.txt"); // Creates a file to read from and opens it
+        ofstream writer("ncaaD1out.txt"); // Created to check if the printFile is working since terminal is too small
+        if(inputFile.is_open() && writer.is_open()){ // Check if the file is open
             string word;
             string date, team1, score1, team2, score2, flag;
             bool setDate = false;
@@ -62,7 +63,8 @@ class MarchMadness{
                 // 4) Get Team2's name (at most 3 words)
                 // 5) Get Team2's Score
                 // 6) Get the Flag (if there is one; can be a number or a string)
-                // 7) Print
+                // 7) Check for cities/states and skip them
+                // 8) Print
 
                 // ------ Step1 ------
                 if(setDate == false){
@@ -97,21 +99,32 @@ class MarchMadness{
                         inputFile >> word;
                     } else {score2 = word; inputFile >> word;} // Else Set the score of team2; the team has 2 words in its name
                 } else {score2 = word; inputFile >> word;} //Else Set the score of team2; the team has 1 word in its name
-                // ------ Step6 ------
-                if(word.substr(0,4) == "2019"){ // If the length of the word is equal to 10...
+                // ------ Step6 & Step7------
+                if(word.substr(0,4) == "2018" || word.substr(0,4) == "2019"){ // If the word is a date...
                     flag = "N/A";
                     setDate = true; // the current word you are on is the date of the next line
                 }
-                else{flag = word; setDate = false;} // Else the word is a flag
+                else{ // Else the current word is not a date but instead a flag and/or a city/state
+                    if(word.length() <= ){
+
+                    }
+                    flag = word;
+                    setDate = false;
+                }
                 //inputFile.putback(-(word.length()+flag.length()));
-                // ------ Step7 ------
+                // ------ Step8 ------
                 // adjust the tab length so the printed format looks more readable
                 string teamTab1 = "\t\t";
+                if(team1.length() <= 4) {teamTab1 += "\t";}
                 if(team1.length() <= 8) {teamTab1 += "\t";}
+                if(team1.length() <= 12) {teamTab1 += "\t";}
                 //@UC Santa Barbara is 17 characters long which is the only longest name in the list of Team1
                 if(team1.length()>=17) {teamTab1 = "\t";}
+
                 string teamTab2 = "\t\t";
+                if(team2.length() <= 4) {teamTab2 += "\t";}
                 if(team2.length() <= 8) {teamTab2 += "\t";}
+                if(team2.length() <= 12) {teamTab2 += "\t";}
                 //@Houston-Victoria is 17 characters long which is the only longest name in the list of Team2
                 if(team2.length()>=17) {teamTab2 = "\t";}
                 cout << "Date: " << date << '\t'
@@ -121,11 +134,20 @@ class MarchMadness{
                      << "Score2: " << score2 << '\t'
                      << "Flag: " << flag << endl;
 
+                // Write to output file
+                writer << "Date: " << date << '\t'
+                       << "Team1: " << team1 << teamTab1
+                       << "Score1: " << score1 << '\t'
+                       << "Team2: " << team2 << teamTab2
+                       << "Score2: " << score2 << '\t'
+                       << "Flag: " << flag << endl;
+
                 if(setDate == true){ // The word you are currently on is the date of the next line.
                     date = word;     // When you repeat the while loop, you will be on the name of team1, not the date
                 }
             }
             inputFile.close(); // Close the file
+            writer.close(); // Close the output file
         }
         else{
             cout << "Error: Problem with opening the file" << endl;
