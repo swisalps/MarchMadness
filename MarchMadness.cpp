@@ -99,27 +99,49 @@ class MarchMadness{
                         inputFile >> word;
                     } else {score2 = word; inputFile >> word;} // Else Set the score of team2; the team has 2 words in its name
                 } else {score2 = word; inputFile >> word;} //Else Set the score of team2; the team has 1 word in its name
+
+
                 // ------ Step6 & Step7------
                 if(word.substr(0,4) == "2018" || word.substr(0,4) == "2019"){ // If the word is a date...
                     flag = "N/A";
+                    venue = "N/A";
                     setDate = true; // the current word you are on is the date of the next line
                 }
                 else{ // Else the current word is not a date but instead a flag and/or a venue
-                    // There is a flag
+                    // There is a flag...
                     if(word.length() <= 3 && (word.substr(0,1) == "P"|| word.substr(0,1) == "F" || word.substr(0,1) == "S" || word.substr(0,1) == "E"|| word.substr(0,1) == "O")){
                         flag = word;
                         inputFile >> word;
+                        // AND there is a venue...
+                        if(!(word.substr(0,4) == "2018" || word.substr(0,4) == "2019")){
+                            for(int i=1; i<=7; i++){
+                                if(!(word.substr(0,4) == "2018" || word.substr(0,4) == "2019")){ // so long as the word is not the date...
+                                    venue += word + " ";
+                                    inputFile >> word;
+                                }
+                                else{break;}
+                            }
+                            setDate = true; // the current word is the date; set the date before the while loop ends
+                        }
+                        else{ // else there is no venue; only a flag
+                            venue = "N/A";
+                            setDate = true; // the current word is the date; set the date before the while loop ends
+                        }
                     }
                     else{ // There is no flag; only a venue
                         flag = "N/A";
-
+                        for(int i=1; i<=7; i++){
+                            if(!(word.substr(0,4) == "2018" || word.substr(0,4) == "2019")){ // so long as the word is not the date...
+                                venue += word + " ";
+                                inputFile >> word;
+                            }
+                            else{break;}
+                        }
+                        setDate = true; // the current word is the date; set the date before the while loop ends
                     }
-                    if(){ // Check if there is aa venue in addition to a flag
-
-                    }
-                    flag = word;
-                    setDate = false;
                 }
+
+
                 // ------ Step8 ------
                 // adjust the tab length so the printed format looks more readable
                 string teamTab1 = "\t\t";
@@ -141,11 +163,13 @@ class MarchMadness{
                        << "Score1: " << score1 << '\t'
                        << "Team2: " << team2 << teamTab2
                        << "Score2: " << score2 << '\t'
-                       << "Flag: " << flag << endl;
+                       << "Flag: " << flag << '\t'
+                       << "Venue: " << venue << endl;
 
                 if(setDate == true){ // The word you are currently on is the date of the next line.
                     date = word;     // When you repeat the while loop, you will be on the name of team1, not the date
                 }
+                venue = ""; // reset the venue
             }
             inputFile.close(); // Close the file
             writer.close(); // Close the output file
