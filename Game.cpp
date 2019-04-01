@@ -10,7 +10,11 @@ class Game{
 
 
     // Constructor
-    Game(){
-
+    Game(string t1, string t2, string loc, int score1, int score2){
+        team1 = t1;
+        team2 = t2;
+        location = loc;
+        team1Score = score1;
+        team2Score = score2;
     }
 };
