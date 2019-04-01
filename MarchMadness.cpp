@@ -50,7 +50,7 @@ class MarchMadness{
     // These changes relate to the number of if-statements for checking the team name length,
     // changing the year, and changing the tab length.
     void printFile2(){
-        ifstream inputFile("ncaaD1.txt"); // Creates a file to read from and opens it
+        ifstream inputFile("ncaaD1v2.txt"); // Creates a file to read from and opens it
         ofstream writer("ncaaD1out.txt"); // Created to check if the printFile is working since terminal is too small
         if(inputFile.is_open() && writer.is_open()){ // Check if the file is open
             string word;
@@ -118,6 +118,10 @@ class MarchMadness{
                                 if(!(word.substr(0,4) == "2018" || word.substr(0,4) == "2019")){ // so long as the word is not the date...
                                     venue += word + " ";
                                     inputFile >> word;
+                                    if(inputFile.eof()){
+                                        venue += word;
+                                        break;
+                                    }
                                 }
                                 else{break;}
                             }
@@ -134,6 +138,10 @@ class MarchMadness{
                             if(!(word.substr(0,4) == "2018" || word.substr(0,4) == "2019")){ // so long as the word is not the date...
                                 venue += word + " ";
                                 inputFile >> word;
+                                if(inputFile.eof()){
+                                    venue += word;
+                                    break;
+                                }
                             }
                             else{break;}
                         }
