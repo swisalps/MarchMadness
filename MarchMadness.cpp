@@ -50,7 +50,7 @@ class MarchMadness{
     // These changes relate to the number of if-statements for checking the team name length,
     // changing the year, and changing the tab length.
     void printFile2(){
-        ifstream inputFile("ncaaD1v2.txt"); // Creates a file to read from and opens it
+        ifstream inputFile("ncaaD1.txt"); // Creates a file to read from and opens it
         ofstream writer("ncaaD1out.txt"); // Created to check if the printFile is working since terminal is too small
         if(inputFile.is_open() && writer.is_open()){ // Check if the file is open
             string word;
@@ -155,6 +155,9 @@ class MarchMadness{
                 if(team2.length() <= 4) {teamTab2 += "\t";}
                 if(team2.length() <= 8) {teamTab2 += "\t";}
                 if(team2.length() <= 12) {teamTab2 += "\t";}
+
+                string flagTab = "\t";
+                if(flag.length() == 1){flagTab += "\t";}
                 //@Houston-Victoria is 17 characters long which is the only longest name in the list of Team2
                 if(team2.length()>=17) {teamTab2 = "\t";}
                 // Write to output file
@@ -163,7 +166,7 @@ class MarchMadness{
                        << "Score1: " << score1 << '\t'
                        << "Team2: " << team2 << teamTab2
                        << "Score2: " << score2 << '\t'
-                       << "Flag: " << flag << '\t'
+                       << "Flag: " << flag << flagTab
                        << "Venue: " << venue << endl;
 
                 if(setDate == true){ // The word you are currently on is the date of the next line.
