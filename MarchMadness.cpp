@@ -102,7 +102,7 @@ class MarchMadness{
 
 
                 // ------ Step6 & Step7------
-                if(word.substr(0,4) == "2018" || word.substr(0,4) == "2019"){ // If the word is a date...
+                if((word.substr(0,4) == "2018" || word.substr(0,4) == "2019") || (inputFile.eof())){ // If the word is a date...
                     flag = "N/A";
                     venue = "N/A";
                     setDate = true; // the current word you are on is the date of the next line
@@ -113,7 +113,7 @@ class MarchMadness{
                         flag = word;
                         inputFile >> word;
                         // AND there is a venue...
-                        if(!(word.substr(0,4) == "2018" || word.substr(0,4) == "2019")){
+                        if((!(word.substr(0,4) == "2018" || word.substr(0,4) == "2019")) && (!inputFile.eof())){
                             for(int i=1; i<=7; i++){
                                 if(!(word.substr(0,4) == "2018" || word.substr(0,4) == "2019")){ // so long as the word is not the date...
                                     venue += word + " ";
@@ -127,7 +127,7 @@ class MarchMadness{
                             }
                             setDate = true; // the current word is the date; set the date before the while loop ends
                         }
-                        else{ // else there is no venue; only a flag
+                        else{ // else there is no venue; you either reached the end of the file or another date; there's only a flag
                             venue = "N/A";
                             setDate = true; // the current word is the date; set the date before the while loop ends
                         }
@@ -138,7 +138,7 @@ class MarchMadness{
                             if(!(word.substr(0,4) == "2018" || word.substr(0,4) == "2019")){ // so long as the word is not the date...
                                 venue += word + " ";
                                 inputFile >> word;
-                                if(inputFile.eof()){
+                                if(inputFile.eof()){ //Check if it is the end of the file
                                     venue += word;
                                     break;
                                 }

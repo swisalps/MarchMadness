@@ -6028,4 +6028,4 @@ Date: 2019-03-29	Team1: Duke					Score1: 75	Team2: Virginia Tech		Score2: 73	Fla
 Date: 2019-03-29	Team1: Kentucky				Score1: 62	Team2: Houston				Score2: 58	Flag: P		Venue: NCAA Tournament Kansas City, MO 
 Date: 2019-03-29	Team1: @WI Green Bay		Score1: 80	Team2: CS Bakersfield		Score2: 65	Flag: P		Venue: CIT 
 Date: 2019-03-30	Team1: Texas Tech			Score1: 75	Team2: Gonzaga				Score2: 69	Flag: P		Venue: NCAA Tournament Anaheim, CA 
-Date: 2019-03-30	Team1: Virginia				Score1: 80	Team2: Purdue				Score2: 75	Flag: PO1	Venue: NCAA Tournament Louisville, KY
+Date: 2019-03-30	Team1: Virginia				Score1: 80	Team2: Purdue				Score2: 75	Flag: N/A	Venue: NCAA Tournament Louisville, KY
