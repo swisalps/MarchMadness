@@ -5,8 +5,8 @@
 using namespace std;
 
 	// Global Variables
-	string team1, team2, location;
-	int team1Score, team2Score;
+	//string team1, team2, location;
+	//int team1Score, team2Score;
 
 	// Constructor
 	Game::Game(string t1, string t2, string loc, int score1, int score2){

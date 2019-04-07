@@ -1,10 +1,11 @@
 #ifndef _MARCHMADNESS_GAME_H_
 #define _MARCHMADNESS_GAME_H_
 
+
 #include <string>
 #include <sstream>
 #include <iostream>
-#include "Team.h"
+//#include "Team.h"
 
 class Team;
 
@@ -12,8 +13,8 @@ class Team;
 class Game{
 
 public:
-    string team1, team2, location
-    int team1Score, team2Score
+	std::string team1, team2, location;
+	int team1Score, team2Score;
 
 
     Game();
