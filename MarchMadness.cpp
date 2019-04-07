@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include "Game.h"
 using namespace std;
 
 class MarchMadness{
@@ -196,7 +197,8 @@ class MarchMadness{
         ifstream inputFile("ncaaD1v2.txt"); // Creates a file to read from and opens it
         if(inputFile.is_open()){ // Check if the file is open
             string word;
-            string date, team1, score1, team2, score2, flag, venue;
+            string date, team1, team2, flag, venue;
+			int score1, score2;
             bool setDate = false;
             while(inputFile >> word){
                 // 1) Get the date
@@ -223,10 +225,10 @@ class MarchMadness{
                     if(!isNumber(word)){ // If the second word is ALSO NOT an int...
                         team1.append(" " + word); // append the word to the team name; the team name should now be 3 words long
                         inputFile >> word; // Go to the next word which is the score
-                        score1 = word; // Set the score of team1; the team has 3 words in its name
+                        score1 = stoi(word); // Set the score of team1; the team has 3 words in its name
                         inputFile >> word;
-                    } else {score1 = word; inputFile >> word;} // Else Set the score of team1; the team has 2 words in its name
-                } else {score1 = word; inputFile >> word;} //Else Set the score of team1; the team has 1 word in its name
+                    } else {score1 = stoi(word); inputFile >> word;} // Else Set the score of team1; the team has 2 words in its name
+                } else {score1 = stoi(word); inputFile >> word;} //Else Set the score of team1; the team has 1 word in its name
                 // ------ Step4 & Step5 ------
                 team2 = word;
                 // Check if one of the next 2 words are NOT integers (part of the team's name)
@@ -237,10 +239,10 @@ class MarchMadness{
                     if(!isNumber(word)){ // If the second word is ALSO NOT an int...
                         team2.append(" " + word); // append the word to the team name; the team name should now be 3 words long
                         inputFile >> word; // Go to the next word which is the score
-                        score2 = word; // Set the score of team2; the team has 3 words in its name
+                        score2 = stoi(word); // Set the score of team2; the team has 3 words in its name
                         inputFile >> word;
-                    } else {score2 = word; inputFile >> word;} // Else Set the score of team2; the team has 2 words in its name
-                } else {score2 = word; inputFile >> word;} //Else Set the score of team2; the team has 1 word in its name
+                    } else {score2 = stoi(word); inputFile >> word;} // Else Set the score of team2; the team has 2 words in its name
+                } else {score2 = stoi(word); inputFile >> word;} //Else Set the score of team2; the team has 1 word in its name
 
 
                 // ------ Step6 & Step7------
@@ -318,7 +320,7 @@ class MarchMadness{
                 //       << "Score2: " << score2 << '\t'
                 //       << "Flag: " << flag << flagTab
                 //      << "Venue: " << venue << endl;
-                String location = "";
+                string location = "";
                 if(team1.substr(0,1) == "@")
                 {
                     location = team1.substr(1, team1.length());
@@ -334,7 +336,7 @@ class MarchMadness{
                     location = venue;
                 }
 
-                Game g = new Game(team1, team2, location, score1, score2);
+                Game* g = new Game(team1, team2, location, score1, score2);
 
                 if(setDate == true){ // The word you are currently on is the date of the next line.
                     date = word;     // When you repeat the while loop, you will be on the name of team1, not the date
@@ -342,7 +344,7 @@ class MarchMadness{
                 venue = ""; // reset the venue
             }
             inputFile.close(); // Close the file
-            writer.close(); // Close the output file
+            //writer.close(); // Close the output file
         }
         else{
             cout << "Error: Problem with opening the file" << endl;

@@ -22,9 +22,9 @@ class Team {
         return rating;
     }
 
-    void setRating(double rating)
+    void setRating(double rate)
     {
-        this.rating = rating;
+		rating = rate;
     }
 
 };
