@@ -13,7 +13,7 @@
 class MarchMadness{
 
     public:
-    std::vector<Team> teamVector, gameVector
+    std::vector<Team> teamVector, gameVector;
 
     /**
     *main contructor for the MarchMadness class. takes the file names of
@@ -23,12 +23,11 @@ class MarchMadness{
     MarchMadness(std::string teamsOnlyFileName, std::string gamesFileName);
 
 
-
     /**
     *function that fills an initalized matrix with the values from the
     *input files. One row and its corresponding column represent 1 team
     */
-    createMainMatrix();
+    void createMainMatrix();
 
     /**
     *reads the inital ncaaD1.txt file and enters in only unique
