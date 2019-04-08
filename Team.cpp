@@ -4,27 +4,31 @@
 #include <string>
 #include <sstream>
 #include <map>
-using namespace std;
 
-class Team {
-	string teamName; //note: the team's name is for all intents and purposes equal to the location
-	map<Team, int[]> teamsPlayed;
-	double rating;
-	int wl;
-	Team(string name) {
-		teamName = name;
-        rating = 0.0;
-        wl = 0;
+#include "Team.h"
+
+	Team::Team(int ID, std::string name) {
+		std::string teamName = name;
+		int teamID = ID;
+
 	}
 
-    double getRating()
-    {
-        return rating;
-    }
+	int Team::getID(){
+		return this->teamID;
+	}
 
-    void setRating(double rate)
-    {
-		rating = rate;
-    }
+	std::string Team::getTeamName(){
+		return this->teamName;
+	}
 
-};
+	void Team::setID(int newID){
+		teamID = newID;
+	}
+
+	void Team::setTeamName(std::string newName){
+		teamName = newName;
+	}
+
+	std::string Team::toString(){
+		return("\t" + std::to_string(this->getID()) + ", " + (this->getTeamName()));
+		}
