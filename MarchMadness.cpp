@@ -20,8 +20,7 @@ using namespace std;
 		//     cout << date << '\t' << team1 << '\t' << team1Score << '\t' << team2 << '\t' << team2Score << endl;
 		// }
 
-		//printFile();
-		printFile2();
+		printFile();
 		// outputFile.close();
 	}
 
