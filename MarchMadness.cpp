@@ -3,7 +3,10 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-#include <vector>
+#include <list>
+#include <Eigen/Core>
+#include <Eigen/Dense>
+
 
 #include <Eigen/Core>
 #include <Eigen/Dense>
@@ -11,6 +14,19 @@
 #include "MarchMadness.h"
 #include "Game.h"
 using namespace std;
+
+
+class MarchMadness{
+
+	// Global Variables
+public:
+	// ofstream outputFile;
+	// string line;
+	// string date;
+	// string team1, team1Score, team2, team2Score;
+    //list<Team> teamVector;
+	Eigen::MatrixXi m;
+	Eigen::VectorXi v;
 
 	// Constructor
 	MarchMadness::MarchMadness(){
