@@ -1,5 +1,5 @@
-#ifndef _MARCHMADNESS_GAME_H_
-#define _MARCHMADNESS_GAME_H_
+#ifndef _MARCHMADNESS_H_
+#define _MARCHMADNESS_H_
 
 
 #include <string>
@@ -48,4 +48,4 @@ class MarchMadness{
     std::string toString();
 
 };
-#endif //MARCHMADNESS_GAME_H
+#endif //MARCHMADNESS_H
