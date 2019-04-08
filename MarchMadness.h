@@ -4,7 +4,10 @@
 
 #include <string>
 #include <sstream>
+#include <vector>
 #include <iostream>
+
+#include "Game.h"
 //#include "Team.h"
 
 class MarchMadness{
