@@ -5,40 +5,48 @@
 #include <sstream>
 #include <vector>
 
-#include <Eigen/Core>
-#include <Eigen/Dense>
+#include <Eigen/Eigen/Core>
+#include <Eigen/Eigen/Dense>
 
-#include "MarchMadness.h"
+
 #include "Game.h"
 using namespace std;
 
+class MarchMadness{
+
+	// Global Variables
+public:
+	// ofstream outputFile;
+	// string line;
+	// string date;
+	// string team1, team1Score, team2, team2Score;
+	vector<Team> teamVector;
+	vector<Game> gameVector;
+
 	// Constructor
-	MarchMadness::MarchMadness(){
+	MarchMadness(){
 		//myfile.open("ncaaD1.txt", ios::in);
 		//ifstream inputFile("ncaaD1.txt");
 		// while(inputFile >> date >> team1 >> team1Score >> team2 >> team2Score){
 		//     cout << date << '\t' << team1 << '\t' << team1Score << '\t' << team2 << '\t' << team2Score << endl;
 		// }
 
-		printFile();
+		//printFile();
+		printFile2();
 		// outputFile.close();
 	}
-
-    void MarchMadness::createMainMatrix(){
-
-    }
 
 	// Prints the contents of the file "ncaaD1.txt" in the correct format.
 	// Prints based on word presence.
 	// NOTE: This function works only for "ncaaD1.txt". Using any other file may result in at least three changes to this function.
 	// These changes relate to the number of if-statements for checking the team name length,
 	// changing the year, and changing the tab length.
-	void MarchMadness::printFile(){
+	void printFile2(){
 		ifstream inputFile("ncaaD1v2.txt"); // Creates a file to read from and opens it
 		ofstream writer("ncaaD1out.txt"); // Created to check if the printFile is working since terminal is too small
 		if (inputFile.is_open() && writer.is_open()){ // Check if the file is open
 			string word;
-			string date, team1, score1, team2, score2, flag, venue;
+			string date, team1, score1, team2, score2, flag, venue, location;
 			bool setDate = false;
 			while (inputFile >> word){
 				// 1) Get the date
@@ -165,6 +173,36 @@ using namespace std;
 					<< "Flag: " << flag << flagTab
 					<< "Venue: " << venue << endl;
 
+				// Generate a Game object and put it into the game vector
+				if (team1.substr(0, 1) == "@"){ // If the game is at team1's location
+					location = team1.substr(1, team1.length());
+					team1 = location;
+				}
+				else if (team2.substr(0, 1) == "@"){ // If the game is at team2's location
+					location = team2.substr(1, team2.length());
+					team2 = location;
+				}
+				else{ location = venue; } // If the game is at neither team's location but instead a venue
+				// Create a stringstream object to convert a string into an int for the scores
+				stringstream convertScore1(score1);
+				stringstream convertScore2(score2);
+				int s1 = 0;
+				int s2 = 0;
+				convertScore1 >> s1;
+				convertScore2 >> s2;
+				// Make the Game Object and insert it
+				gameVector.emplace_back(new Game(team1, team2, location, s1, s2));
+				// *** End of Generating Game object & inserting into vector
+
+				// Insert the team names into the team vector
+				// Make sure there are no repeats
+
+				// for(int i=0; i<teamVector.size(); i++){
+				// 	if(){//if the id's do not match, add it
+				// 		teamVector.emplace_back();
+				// 	}
+				// }
+
 				if (setDate == true){ // The word you are currently on is the date of the next line.
 					date = word;     // When you repeat the while loop, you will be on the name of team1, not the date
 				}
@@ -179,14 +217,14 @@ using namespace std;
 	}
 
 
-	bool MarchMadness::isNumber(string word){
+	bool isNumber(string word){
 		for (int i = 0; i < word.length(); i++)
 			if (isdigit(word[i]) == false)
 				return false;
 
 		return true;
 	}
-
+};
 
 // Main
 int main(){
