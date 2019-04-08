@@ -248,7 +248,7 @@ public:
 				// ------ Step6 & Step7------
 
 				}
-
+		}
 	}
 
 	// Using a text file, create the Game objects and store them within <blank>, which we will
@@ -256,7 +256,7 @@ public:
 	void generateGames(){
 		ifstream inputFile("ncaaD1v2.txt"); // Creates a file to read from and opens it
 		if (inputFile.is_open()){ // Check if the file is open
-			string word;
+			string word = "";
 			string date, team1, team2, flag, venue;
 			int score1, score2;
 			bool setDate = false;
@@ -414,8 +414,7 @@ public:
 			cout << "Error: Problem with opening the file" << endl;
 		}
 	}
-    }
-
+    
 	bool isNumber(string word){
 		for (int i = 0; i < word.length(); i++)
 			if (isdigit(word[i]) == false)
