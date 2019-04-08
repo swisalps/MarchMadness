@@ -17,7 +17,7 @@ public:
 	// string line;
 	// string date;
 	// string team1, team1Score, team2, team2Score;
-    vector<Team> teamVector;
+    //vector<Team> teamVector;
 
 	// Constructor
 	MarchMadness(){
