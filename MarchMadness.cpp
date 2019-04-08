@@ -10,6 +10,8 @@
 
 
 #include "Game.h"
+#include "Team.h"
+#include "MarchMadness.h"
 using namespace std;
 
 class MarchMadness{
@@ -24,7 +26,7 @@ public:
 	vector<Game> gameVector;
 
 	// Constructor
-	MarchMadness(){
+	MarchMadness::MarchMadness(){
 		//myfile.open("ncaaD1.txt", ios::in);
 		//ifstream inputFile("ncaaD1.txt");
 		// while(inputFile >> date >> team1 >> team1Score >> team2 >> team2Score){
@@ -32,7 +34,7 @@ public:
 		// }
 
 		//printFile();
-		printFile2();
+		printFile();
 		// outputFile.close();
 	}
 
@@ -41,7 +43,7 @@ public:
 	// NOTE: This function works only for "ncaaD1.txt". Using any other file may result in at least three changes to this function.
 	// These changes relate to the number of if-statements for checking the team name length,
 	// changing the year, and changing the tab length.
-	void printFile2(){
+	void MarchMadness::printFile(){
 		ifstream inputFile("ncaaD1v2.txt"); // Creates a file to read from and opens it
 		ofstream writer("ncaaD1out.txt"); // Created to check if the printFile is working since terminal is too small
 		if (inputFile.is_open() && writer.is_open()){ // Check if the file is open
@@ -217,7 +219,7 @@ public:
 	}
 
 
-	bool isNumber(string word){
+	bool MarchMadness::isNumber(string word){
 		for (int i = 0; i < word.length(); i++)
 			if (isdigit(word[i]) == false)
 				return false;
