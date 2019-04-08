@@ -250,6 +250,7 @@ public:
 				}
 
 	}
+	}
 
 	// Using a text file, create the Game objects and store them within <blank>, which we will
 	// use to generate the matrix/vectors and the teams
@@ -413,7 +414,6 @@ public:
 		else{
 			cout << "Error: Problem with opening the file" << endl;
 		}
-	}
     }
 
 	bool isNumber(string word){
