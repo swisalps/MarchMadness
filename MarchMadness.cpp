@@ -179,7 +179,7 @@ using namespace std;
 	}
 
 
-	bool isNumber(string word){
+	bool MarchMadness::isNumber(string word){
 		for (int i = 0; i < word.length(); i++)
 			if (isdigit(word[i]) == false)
 				return false;
