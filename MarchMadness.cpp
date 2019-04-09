@@ -5,6 +5,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <set>
 
 #include <Eigen/Core>
 #include <Eigen/Dense>
@@ -14,6 +15,7 @@
 #include "Team.h"
 #include "MarchMadness.h"
 using namespace std;
+using namespace Eigen;
 
 
 
@@ -45,6 +47,7 @@ using namespace std;
 		if (inputFile.is_open() && writer.is_open()){ // Check if the file is open
 			string word;
 			string date, team1, score1, team2, score2, flag, venue, location;
+			set<string> teams;
 			bool setDate = false;
 			while (inputFile >> word){
 				// 1) Get the date
@@ -188,24 +191,34 @@ using namespace std;
 				int s2 = 0;
 				convertScore1 >> s1;
 				convertScore2 >> s2;
+				teams.insert(team1);
+				teams.insert(team2);
 				// Make the Game Object and insert it
-				//gameVector.emplace_back(new Game(team1, team2, location, s1, s2));
+				gameVector.emplace_back(new Game(team1, team2, location, s1, s2));
 				// *** End of Generating Game object & inserting into vector
 
 				// Insert the team names into the team vector
 				// Make sure there are no repeats
 
-				// for(int i=0; i<teamVector.size(); i++){
-				// 	if(){//if the id's do not match, add it
-				// 		teamVector.emplace_back();
-				// 	}
-				// }
+				
 
 				if (setDate == true){ // The word you are currently on is the date of the next line.
 					date = word;     // When you repeat the while loop, you will be on the name of team1, not the date
 				}
 				venue = ""; // reset the venue
 			}
+			int q = 1;
+			for (std::set<string>::iterator it = teams.begin(); it != teams.end(); ++it) {
+				string name = *it;
+				Team* temp = new Team(q, name);
+				teamVector.push_back(temp);
+				++q;
+			}
+			for (int i = 0; i < teamVector.size(); ++i) {
+				//cout << teamVector[i]->toString()<<endl;
+			}
+			cout<< teams.size()<<"<-teams || vector ->"<<teamVector.size() << std::endl;
+			system("pause");
 			inputFile.close(); // Close the file
 			writer.close(); // Close the output file
 		}

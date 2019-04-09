@@ -6,6 +6,8 @@
 #include <sstream>
 #include <vector>
 #include <iostream>
+#include <Eigen/Core>
+#include <Eigen/Dense>
 
 #include "Game.h"
 #include "Team.h"
@@ -13,7 +15,9 @@
 class MarchMadness{
 
 public:
-	std::vector<Team> teamVector, gameVector;
+	std::vector<Team*> teamVector;
+	std::vector<Game*> gameVector;
+	Eigen::MatrixXi teamMatrix;
 
 		/**
 		*main contructor for the MarchMadness class. takes the file names of
