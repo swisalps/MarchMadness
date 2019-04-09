@@ -8,8 +8,8 @@
 #include "Team.h"
 
 	Team::Team(int ID, std::string name) {
-		std::string teamName = name;
-		int teamID = ID;
+		teamName = name;
+		teamID = ID;
 
 	}
 

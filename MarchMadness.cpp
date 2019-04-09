@@ -215,7 +215,7 @@ using namespace Eigen;
 				++q;
 			}
 			for (int i = 0; i < teamVector.size(); ++i) {
-				//cout << teamVector[i]->toString()<<endl;
+				cout << teamVector[i]->toString()<<endl;
 			}
 			cout<< teams.size()<<"<-teams || vector ->"<<teamVector.size() << std::endl;
 			system("pause");
