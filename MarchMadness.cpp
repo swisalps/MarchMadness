@@ -5,8 +5,8 @@
 #include <sstream>
 #include <vector>
 
-#include <Eigen/Eigen/Core>
-#include <Eigen/Eigen/Dense>
+#include <Eigen/Core>
+#include <Eigen/Dense>
 
 
 #include "Game.h"
@@ -14,16 +14,11 @@
 #include "MarchMadness.h"
 using namespace std;
 
-class MarchMadness{
 
-	// Global Variables
-public:
-	// ofstream outputFile;
-	// string line;
-	// string date;
-	// string team1, team1Score, team2, team2Score;
-	vector<Team> teamVector;
-	vector<Game> gameVector;
+
+	
+
+	
 
 	// Constructor
 	MarchMadness::MarchMadness(){
@@ -193,7 +188,7 @@ public:
 				convertScore1 >> s1;
 				convertScore2 >> s2;
 				// Make the Game Object and insert it
-				gameVector.emplace_back(new Game(team1, team2, location, s1, s2));
+				//gameVector.emplace_back(new Game(team1, team2, location, s1, s2));
 				// *** End of Generating Game object & inserting into vector
 
 				// Insert the team names into the team vector
@@ -226,7 +221,7 @@ public:
 
 		return true;
 	}
-};
+
 
 // Main
 int main(){
