@@ -14,7 +14,7 @@
 	}
 
 	int Team::getID(){
-		return this->teamID;
+		return teamID;
 	}
 
 	std::string Team::getTeamName(){

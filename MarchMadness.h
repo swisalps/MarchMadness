@@ -26,6 +26,7 @@ public:
 		*/
 	MarchMadness();
 
+	int getIdByName(std::string teamName);
     /**
     *large method, this method reads the file ncaaD1.txt and populates the teamList variable
     *with every unique team name in the file, it also populates the GamesList with every
@@ -40,6 +41,7 @@ public:
 	*/
 	void createMainMatrix();
 
+	
 
     bool isNumber(std::string word);
 

@@ -192,23 +192,21 @@ using namespace Eigen;
 				int s2 = 0;
 				convertScore1 >> s1;
 				convertScore2 >> s2;
+				// Add teams to a set 
 				teams.insert(team1);
 				teams.insert(team2);
 				// Make the Game Object and insert it
 				gameVector.emplace_back(new Game(team1, team2, location, s1, s2));
 				// *** End of Generating Game object & inserting into vector
 
-				// Insert the team names into the team vector
-				// Make sure there are no repeats
-
 				
-
 				if (setDate == true){ // The word you are currently on is the date of the next line.
 					date = word;     // When you repeat the while loop, you will be on the name of team1, not the date
 				}
 				venue = ""; // reset the venue
 			}
-			int q = 1;
+			int q = 0;
+			// Insert the team names into the team vector
 			for (std::set<string>::iterator it = teams.begin(); it != teams.end(); ++it) {
 				string name = *it;
 				Team* temp = new Team(q, name);
@@ -217,8 +215,28 @@ using namespace Eigen;
 			}
 			for (int i = 0; i < teamVector.size(); ++i) {
 				cout << teamVector[i]->toString()<<endl;
+			}			
+			teamMatrix.setZero(teamVector.size(), teamVector.size());
+
+			for (int i = 0; i < gameVector.size(); ++i) {
+				Game* tempGame = gameVector[i];
+				for (int j = 0; j < teamVector.size(); ++j) {
+					int iD;
+					if (teamVector[j]->getTeamName() == tempGame->getTeam1() || teamVector[j]->getTeamName() == tempGame->getTeam2()) {
+						iD = teamVector[j]->getID ();
+						teamMatrix(iD, iD) = teamMatrix(iD, iD) + 1;
+						int team1ID, team2ID;
+						if (tempGame->getScore1() > tempGame->getScore2()) {
+							team1ID = getIdByName(tempGame->getTeam1());
+							team2ID = getIdByName(tempGame->getTeam2());
+						}
+					}
+				}
 			}
-			teamMatrix.setConstant(teamVector.size(), teamVector.size(), 0);
+
+			for (int i = 0; i < gameVector.size(); ++i) {
+				cout << gameVector[i]->toString() << endl;
+			}
 			cout << teamMatrix << "\n";
 			system("pause");
 			inputFile.close(); // Close the file
@@ -229,6 +247,13 @@ using namespace Eigen;
 		}
 	}
 
+	int MarchMadness::getIdByName(string teamName) {
+			for (int j = 0; j < teamVector.size(); ++j) {
+				if (teamVector[j]->getTeamName() == teamName) {
+					return teamVector[j]->getID();
+				}
+			}
+	}
 	//void createMainMatrix() {
 		
 	//}

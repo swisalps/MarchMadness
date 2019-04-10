@@ -1,14 +1,7 @@
 2018-11-06 @Tulsa                    73  Alcorn St                56
-2018-11-06  Penn                     72 @George Mason             71
-2018-11-06 @Gonzaga                 120  Idaho St                 79
-2018-11-06 @Texas Tech               87  Incarnate Word           37
-2018-11-06 @MTSU                     91  Lees-McRae               69
 2018-12-01 @Utah                     69  Tulsa                    64
-2018-12-08 @Tulsa                    47  Kansas St                46
-2018-12-13 @Tulsa                    70  New Orleans              60
-2018-12-22  Penn                     75 @New Mexico               65
-2018-12-29 @Toledo                   77  Penn                     45
+2018-12-08 @Duke                     47  Alcorn St                46
+2018-12-13 @Duke                     70  Utah                     60
 2019-01-05 @Duke                     87  Clemson                  68
-2019-01-08  Duke                     87 @Wake Forest              65
-2019-01-12  Duke                     80 @Florida St               78
-2019-01-14  Syracuse                 95 @Duke                     91 O1
+2019-01-08  Duke                     87 @Tulsa                    65
+
