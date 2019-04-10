@@ -261,6 +261,9 @@ using namespace Eigen;
 			}
 		}
 	}
+	//Creates a matrix of size(number of games, number of teams) and sets a the value of the winning team to 1 and the losing team to -1 for each game
+	//if there is a tie then one team is set to 1 and the other is set to -1
+	//then it takes the difference between the two scores and sets it as the margin of victory for that game in the mOV vector
 	void MarchMadness::createGameMatrix() {
 		gameMatrix.setZero(gameVector.size(), teamVector.size());
 
