@@ -6,6 +6,8 @@
 #include <sstream>
 #include <vector>
 #include <set>
+#include <chrono>
+#include <time.h>
 
 #include <Eigen/Core>
 #include <Eigen/Dense>
@@ -216,13 +218,17 @@ using namespace Eigen;
 				cout << teamVector[i]->toString()<<endl;
 			}			
 			
-			createMainMatrix();
-			for (int i = 0; i < gameVector.size(); ++i) {
-				cout << gameVector[i]->toString() << endl;
-			}
-			cout << teamMatrix << "\n";
+			createTeamMatrix();
+			createGameMatrix();
+			//for (int i = 0; i < gameVector.size(); ++i) {
+				//cout << gameVector[i]->toString() << endl;
+			//}
+			//cout << teamMatrix << endl;
 			cout << "Number of games: " << gameVector.size() << endl;
-			system("pause");
+			//cout << gameMatrix << endl;
+			//for (int i = 0; i < marOfVict.size(); ++i) {
+				//cout << marOfVict[i] << endl;
+			//}
 			inputFile.close(); // Close the file
 			writer.close(); // Close the output file
 		}
@@ -230,7 +236,7 @@ using namespace Eigen;
 			cout << "Error: Problem with opening the file" << endl;
 		}
 	}
-
+	// This method takes a string representing a team name then finds that teams ID number by searching through the teamVector
 	int MarchMadness::getIdByName(string teamName) {
 			for (int j = 0; j < teamVector.size(); ++j) {
 				if (teamVector[j]->getTeamName() == teamName) {
@@ -238,7 +244,10 @@ using namespace Eigen;
 				}
 			}
 	}
-	void MarchMadness::createMainMatrix() {
+	//This method creates the matrix setting the number of rows and columns equal to the nmumber of teams and sets all values equal to 0
+	//It also set the values of the matrix diagonal equal to the number of games played by each team
+	//Team locations in the matrix rows and column is equal to each teams id number
+	void MarchMadness::createTeamMatrix() {
 		teamMatrix.setZero(teamVector.size(), teamVector.size());
 
 		for (int i = 0; i < gameVector.size(); ++i) {
@@ -248,13 +257,34 @@ using namespace Eigen;
 				if (teamVector[j]->getTeamName() == tempGame->getTeam1() || teamVector[j]->getTeamName() == tempGame->getTeam2()) {
 					iD = teamVector[j]->getID();
 					teamMatrix(iD, iD) = teamMatrix(iD, iD) + 1;
-					int team1ID, team2ID;
-					if (tempGame->getScore1() > tempGame->getScore2()) {
-						team1ID = getIdByName(tempGame->getTeam1());
-						team2ID = getIdByName(tempGame->getTeam2());
-					}
 				}
 			}
+		}
+	}
+	void MarchMadness::createGameMatrix() {
+		gameMatrix.setZero(gameVector.size(), teamVector.size());
+
+		for (int i = 0; i < gameVector.size(); ++i) {
+			Game* tempGame = gameVector[i];
+			int team1ID, team2ID, score1, score2, mOV;
+			score1 = tempGame->getScore1();
+			score2 = tempGame->getScore2();
+			if (score1 < score2) {
+						team1ID = getIdByName(tempGame->getTeam1());
+						team2ID = getIdByName(tempGame->getTeam2());
+						gameMatrix(i, team1ID) = -1;
+						gameMatrix(i, team2ID) = 1;
+						mOV = score2 - score1;
+			}
+			else  {
+				team1ID = getIdByName(tempGame->getTeam1());
+				team2ID = getIdByName(tempGame->getTeam2());
+				gameMatrix(i, team1ID) = 1;
+				gameMatrix(i, team2ID) = -1;
+				mOV = score1 - score2;
+			}
+			marOfVict.push_back(mOV);
+
 		}
 	}
 
@@ -270,7 +300,12 @@ using namespace Eigen;
 
 // Main
 int main(){
+	auto start = std::chrono::high_resolution_clock::now();
 	MarchMadness* test = new MarchMadness();
+	auto stop = std::chrono::high_resolution_clock::now();
+	auto duration = std::chrono::duration_cast<std::chrono::minutes>(stop - start);
+	cout << "Total execution Time: " << duration.count() << " minutes\n";
+	system("pause");
 	delete test;
 	return 0;
 

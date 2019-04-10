@@ -5,6 +5,7 @@ E[Y] = rA - rB. E[Y] should be the expected value for Y
 y = the observed margin of victory between teams A and B
 
 ===========
+m = number of games
 n = number of teams
 xJ = independent predictor variable for team j (1 <= j <= n). xJ can be -1, 0, or 1.
 Y = margin of victory
