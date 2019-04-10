@@ -42,12 +42,13 @@ using namespace Eigen;
 	// These changes relate to the number of if-statements for checking the team name length,
 	// changing the year, and changing the tab length.
 	void MarchMadness::printFile(){
-		ifstream inputFile("ncaaD1v2.txt"); // Creates a file to read from and opens it
+		ifstream inputFile("ncaaD1v3.txt"); // Creates a file to read from and opens it
 		ofstream writer("ncaaD1out.txt"); // Created to check if the printFile is working since terminal is too small
 		if (inputFile.is_open() && writer.is_open()){ // Check if the file is open
 			string word;
 			string date, team1, score1, team2, score2, flag, venue, location;
 			set<string> teams;
+			MatrixXi teamMatrix(0,0);
 			bool setDate = false;
 			while (inputFile >> word){
 				// 1) Get the date
@@ -217,7 +218,8 @@ using namespace Eigen;
 			for (int i = 0; i < teamVector.size(); ++i) {
 				cout << teamVector[i]->toString()<<endl;
 			}
-			cout<< teams.size()<<"<-teams || vector ->"<<teamVector.size() << std::endl;
+			teamMatrix.setConstant(teamVector.size(), teamVector.size(), 0);
+			cout << teamMatrix << "\n";
 			system("pause");
 			inputFile.close(); // Close the file
 			writer.close(); // Close the output file
@@ -226,6 +228,10 @@ using namespace Eigen;
 			cout << "Error: Problem with opening the file" << endl;
 		}
 	}
+
+	//void createMainMatrix() {
+		
+	//}
 
 
 	bool MarchMadness::isNumber(string word){

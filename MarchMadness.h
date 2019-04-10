@@ -17,7 +17,7 @@ class MarchMadness{
 public:
 	std::vector<Team*> teamVector;
 	std::vector<Game*> gameVector;
-	Eigen::MatrixXi teamMatrix;
+	//Eigen::MatrixXi teamMatrix;
 
 		/**
 		*main contructor for the MarchMadness class. takes the file names of
