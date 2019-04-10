@@ -17,9 +17,9 @@ class MarchMadness{
 public:
 	std::vector<Team*> teamVector;
 	std::vector<Game*> gameVector;
-	std::vector<int> marOfVict; //Vector representing the marging of vicory for a game
+	std::vector<int> scoreDiff; //Vector representing the marging of vicory for a game
 	Eigen::MatrixXi teamMatrix;
-	Eigen::MatrixXi gameMatrix;
+
 
 		/**
 		*main contructor for the MarchMadness class. takes the file names of
@@ -41,9 +41,9 @@ public:
 	*function that fills an initalized matrix with the values from the
 	*input files. One row and its corresponding column represent 1 team
 	*/
-	void createTeamMatrix();
+	void createMainMatrix();
 
-	void createGameMatrix();
+	
 
 	
 

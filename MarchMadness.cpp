@@ -214,21 +214,16 @@ using namespace Eigen;
 				teamVector.push_back(temp);
 				++q;
 			}
-			for (int i = 0; i < teamVector.size(); ++i) {
-				cout << teamVector[i]->toString()<<endl;
-			}			
+			//for (int i = 0; i < teamVector.size(); ++i) {
+				//cout << teamVector[i]->toString()<<endl;
+			//}			
 			
-			createTeamMatrix();
-			createGameMatrix();
-			//for (int i = 0; i < gameVector.size(); ++i) {
-				//cout << gameVector[i]->toString() << endl;
-			//}
-			//cout << teamMatrix << endl;
+			createMainMatrix();
+			cout << teamMatrix << endl;
+			for (int i = 0; i < scoreDiff.size(); ++i) {
+				cout << scoreDiff[i] << endl;
+			}
 			cout << "Number of games: " << gameVector.size() << endl;
-			//cout << gameMatrix << endl;
-			//for (int i = 0; i < marOfVict.size(); ++i) {
-				//cout << marOfVict[i] << endl;
-			//}
 			inputFile.close(); // Close the file
 			writer.close(); // Close the output file
 		}
@@ -247,49 +242,25 @@ using namespace Eigen;
 	//This method creates the matrix setting the number of rows and columns equal to the nmumber of teams and sets all values equal to 0
 	//It also set the values of the matrix diagonal equal to the number of games played by each team
 	//Team locations in the matrix rows and column is equal to each teams id number
-	void MarchMadness::createTeamMatrix() {
+	void MarchMadness::createMainMatrix() {
 		teamMatrix.setZero(teamVector.size(), teamVector.size());
-
+		scoreDiff.resize(teamVector.size());
 		for (int i = 0; i < gameVector.size(); ++i) {
 			Game* tempGame = gameVector[i];
-			for (int j = 0; j < teamVector.size(); ++j) {
-				int iD;
-				if (teamVector[j]->getTeamName() == tempGame->getTeam1() || teamVector[j]->getTeamName() == tempGame->getTeam2()) {
-					iD = teamVector[j]->getID();
-					teamMatrix(iD, iD) = teamMatrix(iD, iD) + 1;
-				}
-			}
-		}
-	}
-	//Creates a matrix of size(number of games, number of teams) and sets a the value of the winning team to 1 and the losing team to -1 for each game
-	//if there is a tie then one team is set to 1 and the other is set to -1
-	//then it takes the difference between the two scores and sets it as the margin of victory for that game in the mOV vector
-	void MarchMadness::createGameMatrix() {
-		gameMatrix.setZero(gameVector.size(), teamVector.size());
-
-		for (int i = 0; i < gameVector.size(); ++i) {
-			Game* tempGame = gameVector[i];
-			int team1ID, team2ID, score1, score2, mOV;
+			int team1ID, team2ID, score1, score2;
 			score1 = tempGame->getScore1();
 			score2 = tempGame->getScore2();
-			if (score1 < score2) {
-						team1ID = getIdByName(tempGame->getTeam1());
-						team2ID = getIdByName(tempGame->getTeam2());
-						gameMatrix(i, team1ID) = -1;
-						gameMatrix(i, team2ID) = 1;
-						mOV = score2 - score1;
-			}
-			else  {
-				team1ID = getIdByName(tempGame->getTeam1());
-				team2ID = getIdByName(tempGame->getTeam2());
-				gameMatrix(i, team1ID) = 1;
-				gameMatrix(i, team2ID) = -1;
-				mOV = score1 - score2;
-			}
-			marOfVict.push_back(mOV);
-
+			team1ID = getIdByName(tempGame->getTeam1());
+			team2ID = getIdByName(tempGame->getTeam2());
+			scoreDiff[team1ID] = scoreDiff[team1ID] + (score1 - score2);
+			scoreDiff[team2ID] = scoreDiff[team2ID] + (score2 - score1);
+			teamMatrix(team1ID, team1ID) = teamMatrix(team1ID, team1ID) + 1;
+			teamMatrix(team2ID, team2ID) = teamMatrix(team2ID, team2ID) + 1;
+			teamMatrix(team1ID, team2ID) = teamMatrix(team1ID, team2ID) - 1;
+			teamMatrix(team2ID, team1ID) = teamMatrix(team2ID, team1ID) - 1;
 		}
 	}
+
 
 
 	bool MarchMadness::isNumber(string word){
@@ -306,8 +277,8 @@ int main(){
 	auto start = std::chrono::high_resolution_clock::now();
 	MarchMadness* test = new MarchMadness();
 	auto stop = std::chrono::high_resolution_clock::now();
-	auto duration = std::chrono::duration_cast<std::chrono::minutes>(stop - start);
-	cout << "Total execution Time: " << duration.count() << " minutes\n";
+	auto duration = std::chrono::duration_cast<std::chrono::seconds>(stop - start);
+	cout << "Total execution Time: " << duration.count() << " seconds\n";
 	system("pause");
 	delete test;
 	return 0;
