@@ -48,7 +48,6 @@ using namespace Eigen;
 			string word;
 			string date, team1, score1, team2, score2, flag, venue, location;
 			set<string> teams;
-			MatrixXi teamMatrix(0,0);
 			bool setDate = false;
 			while (inputFile >> word){
 				// 1) Get the date
@@ -216,28 +215,13 @@ using namespace Eigen;
 			for (int i = 0; i < teamVector.size(); ++i) {
 				cout << teamVector[i]->toString()<<endl;
 			}			
-			teamMatrix.setZero(teamVector.size(), teamVector.size());
-
-			for (int i = 0; i < gameVector.size(); ++i) {
-				Game* tempGame = gameVector[i];
-				for (int j = 0; j < teamVector.size(); ++j) {
-					int iD;
-					if (teamVector[j]->getTeamName() == tempGame->getTeam1() || teamVector[j]->getTeamName() == tempGame->getTeam2()) {
-						iD = teamVector[j]->getID ();
-						teamMatrix(iD, iD) = teamMatrix(iD, iD) + 1;
-						int team1ID, team2ID;
-						if (tempGame->getScore1() > tempGame->getScore2()) {
-							team1ID = getIdByName(tempGame->getTeam1());
-							team2ID = getIdByName(tempGame->getTeam2());
-						}
-					}
-				}
-			}
-
+			
+			createMainMatrix();
 			for (int i = 0; i < gameVector.size(); ++i) {
 				cout << gameVector[i]->toString() << endl;
 			}
 			cout << teamMatrix << "\n";
+			cout << "Number of games: " << gameVector.size() << endl;
 			system("pause");
 			inputFile.close(); // Close the file
 			writer.close(); // Close the output file
@@ -254,9 +238,25 @@ using namespace Eigen;
 				}
 			}
 	}
-	//void createMainMatrix() {
-		
-	//}
+	void MarchMadness::createMainMatrix() {
+		teamMatrix.setZero(teamVector.size(), teamVector.size());
+
+		for (int i = 0; i < gameVector.size(); ++i) {
+			Game* tempGame = gameVector[i];
+			for (int j = 0; j < teamVector.size(); ++j) {
+				int iD;
+				if (teamVector[j]->getTeamName() == tempGame->getTeam1() || teamVector[j]->getTeamName() == tempGame->getTeam2()) {
+					iD = teamVector[j]->getID();
+					teamMatrix(iD, iD) = teamMatrix(iD, iD) + 1;
+					int team1ID, team2ID;
+					if (tempGame->getScore1() > tempGame->getScore2()) {
+						team1ID = getIdByName(tempGame->getTeam1());
+						team2ID = getIdByName(tempGame->getTeam2());
+					}
+				}
+			}
+		}
+	}
 
 
 	bool MarchMadness::isNumber(string word){
