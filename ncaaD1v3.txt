@@ -1,0 +1,7 @@
+2018-11-06 @Tulsa                    73  Alcorn St                56
+2018-12-01 @Utah                     69  Tulsa                    64
+2018-12-08 @Duke                     47  Alcorn St                46
+2018-12-13 @Duke                     70  Utah                     60
+2019-01-05 @Duke                     87  Clemson                  68
+2019-01-08  Duke                     87 @Tulsa                    65
+

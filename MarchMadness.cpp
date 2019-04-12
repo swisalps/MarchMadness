@@ -5,6 +5,9 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <set>
+#include <chrono>
+#include <time.h>
 
 #include <Eigen/Core>
 #include <Eigen/Dense>
@@ -14,6 +17,7 @@
 #include "Team.h"
 #include "MarchMadness.h"
 using namespace std;
+using namespace Eigen;
 
 
 
@@ -40,11 +44,12 @@ using namespace std;
 	// These changes relate to the number of if-statements for checking the team name length,
 	// changing the year, and changing the tab length.
 	void MarchMadness::printFile(){
-		ifstream inputFile("ncaaD1v2.txt"); // Creates a file to read from and opens it
+		ifstream inputFile("ncaaD1v3.txt"); // Creates a file to read from and opens it
 		ofstream writer("ncaaD1out.txt"); // Created to check if the printFile is working since terminal is too small
 		if (inputFile.is_open() && writer.is_open()){ // Check if the file is open
 			string word;
 			string date, team1, score1, team2, score2, flag, venue, location;
+			set<string> teams;
 			bool setDate = false;
 			while (inputFile >> word){
 				// 1) Get the date
@@ -188,24 +193,37 @@ using namespace std;
 				int s2 = 0;
 				convertScore1 >> s1;
 				convertScore2 >> s2;
+				// Add teams to a set 
+				teams.insert(team1);
+				teams.insert(team2);
 				// Make the Game Object and insert it
-				//gameVector.emplace_back(new Game(team1, team2, location, s1, s2));
+				gameVector.emplace_back(new Game(team1, team2, location, s1, s2));
 				// *** End of Generating Game object & inserting into vector
 
-				// Insert the team names into the team vector
-				// Make sure there are no repeats
-
-				// for(int i=0; i<teamVector.size(); i++){
-				// 	if(){//if the id's do not match, add it
-				// 		teamVector.emplace_back();
-				// 	}
-				// }
-
+				
 				if (setDate == true){ // The word you are currently on is the date of the next line.
 					date = word;     // When you repeat the while loop, you will be on the name of team1, not the date
 				}
 				venue = ""; // reset the venue
 			}
+			int q = 0;
+			// Insert the team names into the team vector
+			for (std::set<string>::iterator it = teams.begin(); it != teams.end(); ++it) {
+				string name = *it;
+				Team* temp = new Team(q, name);
+				teamVector.push_back(temp);
+				++q;
+			}
+			//for (int i = 0; i < teamVector.size(); ++i) {
+				//cout << teamVector[i]->toString()<<endl;
+			//}			
+			
+			createMainMatrix();
+			cout << teamMatrix << endl;
+			for (int i = 0; i < scoreDiff.size(); ++i) {
+				cout << scoreDiff[i] << endl;
+			}
+			cout << "Number of games: " << gameVector.size() << endl;
 			inputFile.close(); // Close the file
 			writer.close(); // Close the output file
 		}
@@ -213,6 +231,36 @@ using namespace std;
 			cout << "Error: Problem with opening the file" << endl;
 		}
 	}
+	// This method takes a string representing a team name then finds that teams ID number by searching through the teamVector
+	int MarchMadness::getIdByName(string teamName) {
+			for (int j = 0; j < teamVector.size(); ++j) {
+				if (teamVector[j]->getTeamName() == teamName) {
+					return teamVector[j]->getID();
+				}
+			}
+	}
+	//This method creates the matrix setting the number of rows and columns equal to the nmumber of teams and sets all values equal to 0
+	//It also set the values of the matrix diagonal equal to the number of games played by each team
+	//Team locations in the matrix rows and column is equal to each teams id number
+	void MarchMadness::createMainMatrix() {
+		teamMatrix.setZero(teamVector.size(), teamVector.size());
+		scoreDiff.resize(teamVector.size());
+		for (int i = 0; i < gameVector.size(); ++i) {
+			Game* tempGame = gameVector[i];
+			int team1ID, team2ID, score1, score2;
+			score1 = tempGame->getScore1();
+			score2 = tempGame->getScore2();
+			team1ID = getIdByName(tempGame->getTeam1());
+			team2ID = getIdByName(tempGame->getTeam2());
+			scoreDiff[team1ID] = scoreDiff[team1ID] + (score1 - score2);
+			scoreDiff[team2ID] = scoreDiff[team2ID] + (score2 - score1);
+			teamMatrix(team1ID, team1ID) = teamMatrix(team1ID, team1ID) + 1;
+			teamMatrix(team2ID, team2ID) = teamMatrix(team2ID, team2ID) + 1;
+			teamMatrix(team1ID, team2ID) = teamMatrix(team1ID, team2ID) - 1;
+			teamMatrix(team2ID, team1ID) = teamMatrix(team2ID, team1ID) - 1;
+		}
+	}
+
 
 
 	bool MarchMadness::isNumber(string word){
@@ -226,7 +274,12 @@ using namespace std;
 
 // Main
 int main(){
+	auto start = std::chrono::high_resolution_clock::now();
 	MarchMadness* test = new MarchMadness();
+	auto stop = std::chrono::high_resolution_clock::now();
+	auto duration = std::chrono::duration_cast<std::chrono::seconds>(stop - start);
+	cout << "Total execution Time: " << duration.count() << " seconds\n";
+	system("pause");
 	delete test;
 	return 0;
 

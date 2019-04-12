@@ -6,6 +6,8 @@
 #include <sstream>
 #include <vector>
 #include <iostream>
+#include <Eigen/Core>
+#include <Eigen/Dense>
 
 #include "Game.h"
 #include "Team.h"
@@ -13,7 +15,11 @@
 class MarchMadness{
 
 public:
-	std::vector<Team> teamVector, gameVector;
+	std::vector<Team*> teamVector;
+	std::vector<Game*> gameVector;
+	std::vector<int> scoreDiff; //Vector representing the marging of vicory for a game
+	Eigen::MatrixXi teamMatrix;
+
 
 		/**
 		*main contructor for the MarchMadness class. takes the file names of
@@ -22,6 +28,7 @@ public:
 		*/
 	MarchMadness();
 
+	int getIdByName(std::string teamName);
     /**
     *large method, this method reads the file ncaaD1.txt and populates the teamList variable
     *with every unique team name in the file, it also populates the GamesList with every
@@ -36,6 +43,9 @@ public:
 	*/
 	void createMainMatrix();
 
+	
+
+	
 
     bool isNumber(std::string word);
 

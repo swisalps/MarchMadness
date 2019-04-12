@@ -8,13 +8,13 @@
 #include "Team.h"
 
 	Team::Team(int ID, std::string name) {
-		std::string teamName = name;
-		int teamID = ID;
+		teamName = name;
+		teamID = ID;
 
 	}
 
 	int Team::getID(){
-		return this->teamID;
+		return teamID;
 	}
 
 	std::string Team::getTeamName(){
