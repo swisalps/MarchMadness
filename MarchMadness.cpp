@@ -11,6 +11,8 @@
 
 #include <Eigen/Core>
 #include <Eigen/Dense>
+#include <Eigen/LU>
+
 
 
 #include "Game.h"
@@ -44,7 +46,7 @@ using namespace Eigen;
 	// These changes relate to the number of if-statements for checking the team name length,
 	// changing the year, and changing the tab length.
 	void MarchMadness::printFile(){
-		ifstream inputFile("ncaaD1v3.txt"); // Creates a file to read from and opens it
+		ifstream inputFile("ncaaD1v2.txt"); // Creates a file to read from and opens it
 		ofstream writer("ncaaD1out.txt"); // Created to check if the printFile is working since terminal is too small
 		if (inputFile.is_open() && writer.is_open()){ // Check if the file is open
 			string word;
@@ -214,18 +216,17 @@ using namespace Eigen;
 				teamVector.push_back(temp);
 				++q;
 			}
-			//for (int i = 0; i < teamVector.size(); ++i) {
-				//cout << teamVector[i]->toString()<<endl;
-			//}			
-			
+					
+			ofstream writer2("teamRatings.txt");
 			createMainMatrix();
-			cout << teamMatrix << endl;
-			for (int i = 0; i < scoreDiff.size(); ++i) {
-				cout << scoreDiff[i] << endl;
-			}
+			for (int i = 0; i < ratings.size(); ++i) {
+			writer2 << teamVector[i]->getTeamName() << ": " << ratings[i] <<endl;
+		    }
+			//cout << ratings << endl;
 			cout << "Number of games: " << gameVector.size() << endl;
 			inputFile.close(); // Close the file
 			writer.close(); // Close the output file
+			writer2.close();
 		}
 		else{
 			cout << "Error: Problem with opening the file" << endl;
@@ -244,7 +245,7 @@ using namespace Eigen;
 	//Team locations in the matrix rows and column is equal to each teams id number
 	void MarchMadness::createMainMatrix() {
 		teamMatrix.setZero(teamVector.size(), teamVector.size());
-		scoreDiff.resize(teamVector.size());
+		scoreDiff.setZero(teamVector.size());
 		for (int i = 0; i < gameVector.size(); ++i) {
 			Game* tempGame = gameVector[i];
 			int team1ID, team2ID, score1, score2;
@@ -252,13 +253,19 @@ using namespace Eigen;
 			score2 = tempGame->getScore2();
 			team1ID = getIdByName(tempGame->getTeam1());
 			team2ID = getIdByName(tempGame->getTeam2());
-			scoreDiff[team1ID] = scoreDiff[team1ID] + (score1 - score2);
-			scoreDiff[team2ID] = scoreDiff[team2ID] + (score2 - score1);
+			scoreDiff(team1ID) = scoreDiff(team1ID) + (score1 - score2);
+			scoreDiff(team2ID) = scoreDiff(team2ID) + (score2 - score1);
 			teamMatrix(team1ID, team1ID) = teamMatrix(team1ID, team1ID) + 1;
 			teamMatrix(team2ID, team2ID) = teamMatrix(team2ID, team2ID) + 1;
 			teamMatrix(team1ID, team2ID) = teamMatrix(team1ID, team2ID) - 1;
 			teamMatrix(team2ID, team1ID) = teamMatrix(team2ID, team1ID) - 1;
 		}
+		int numTeams = teamVector.size();
+		for (int j = 0; j < numTeams; ++j) {
+			teamMatrix(numTeams - 1, j) = 1;
+		}
+		scoreDiff[numTeams - 1] = 0;
+		ratings = teamMatrix.lu().solve(scoreDiff);
 	}
 
 
