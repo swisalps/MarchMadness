@@ -17,8 +17,9 @@ class MarchMadness{
 public:
 	std::vector<Team*> teamVector;
 	std::vector<Game*> gameVector;
-	std::vector<int> scoreDiff; //Vector representing the marging of vicory for a game
-	Eigen::MatrixXi teamMatrix;
+	Eigen::VectorXf scoreDiff; //Vector representing the marging of vicory for a game
+	Eigen::VectorXf ratings;
+	Eigen::MatrixXf teamMatrix;
 
 
 		/**
